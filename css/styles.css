@@ -1,1 +1,25 @@
 /* No CSS *//*# sourceMappingURL=styles.css.map */
+.carousel-inner{
+    height: 90vh;
+
+}
+.heroImage{
+    width: 100%;
+    height: 50%;
+}
+#first{
+    background: url('../img/zion.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+}
+#second{
+    background: url('../img/zion2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: center bottom;
+}
