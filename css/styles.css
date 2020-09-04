@@ -1,3 +1,13 @@
+.paragraphText {
+  line-height: 1.5rem;
+  color: #353535;
+}
+
+.mainHeading {
+  color: black;
+  font-size: 3rem;
+}
+
 .carousel-inner {
   height: 90vh;
 }
@@ -18,7 +28,6 @@ header {
   background-size: cover;
   height: 100%;
   width: 100%;
-  /* background-color: red; */
 }
 
 #second {
@@ -63,11 +72,11 @@ header .logo img {
 }
 
 header .headerTop {
-  background: #059b00;
+  background: rgba(10, 148, 5, 0.719);
   top: 0;
   position: absolute;
   width: 100%;
-  height: 30px;
+  height: 35px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -77,10 +86,13 @@ header .headerTop {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerTop ul {
+  margin: 0;
 }
 
 header .headerTop ul li {
@@ -133,7 +145,6 @@ header .main-nav ul li::after {
 }
 
 .hero-Content {
-  z-index: 1;
   position: relative;
   width: 100%;
   height: 90vh;
@@ -150,13 +161,41 @@ header .main-nav ul li::after {
 
 .hero-Content .content {
   background: rgba(54, 56, 58, 0.856);
-  padding: 20px;
+  padding: 40px;
   color: white;
   text-align: center;
 }
 
 .hero-Content .content h1 {
-  font-size: 4rem;
+  font-size: 3.6rem;
   text-transform: uppercase;
+}
+
+.button {
+  border-radius: 0;
+  outline: none;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+}
+
+#cta-btn {
+  background: #00af17;
+  width: 150px;
+  color: white;
+  position: relative;
+}
+
+#cta-btn:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 4px 4px blue;
+          box-shadow: 0 0 4px 4px blue;
+}
+
+#cta-btn:hover {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=styles.css.map */
