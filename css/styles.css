@@ -341,11 +341,61 @@ header .main-nav ul li::after {
 }
 
 .services {
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-left: 200px;
+}
+
+.serve * {
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.serve *:hover {
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
 }
 
 .serve > img {
   width: 40%;
   background-color: red;
+}
+
+.pic {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.pic-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 15px 25px;
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 90%;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.pic:hover .pic-description {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.get > h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */
