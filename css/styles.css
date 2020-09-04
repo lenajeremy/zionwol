@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts//OpenSans-BoldItalic.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts//OpenSans-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts//OpenSans-LightItalic.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts//OpenSans-Semibold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts//OpenSans-SemiboldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
 .paragraphText {
   line-height: 1.5rem;
   color: #353535;
@@ -46,6 +95,10 @@ header {
           box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans";
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,7 +125,9 @@ header .logo img {
 }
 
 header .headerTop {
-  background: rgba(10, 148, 5, 0.719);
+  font-size: 14px;
+  background: rgba(0, 145, 133, 0.719);
+  background: #020074;
   top: 0;
   position: absolute;
   width: 100%;
@@ -89,20 +144,27 @@ header .headerTop {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #d4d4d4;
+  font-weight: bold;
 }
 
-header .headerTop ul {
-  margin: 0;
+header .headerTop p {
+  margin: 0 15px;
 }
 
-header .headerTop ul li {
-  text-transform: uppercase;
-  display: inline;
-  list-style-type: none;
-  margin-right: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  color: white;
+header .headerTop .heroTopSocials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+header .headerTop .heroTopSocials svg {
+  margin: 10px;
 }
 
 header .main-nav {
@@ -128,19 +190,20 @@ header .main-nav ul li {
 
 header .main-nav ul li a {
   text-transform: uppercase;
-  color: green;
+  color: #020074;
+  font-weight: bold;
 }
 
 header .main-nav ul li::after {
   position: absolute;
-  bottom: 0px;
+  bottom: 4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   content: '';
-  background: green;
+  background: #020074;
   width: 40px;
-  height: 4px;
+  height: 3px;
   margin-right: 10px;
 }
 
@@ -160,7 +223,7 @@ header .main-nav ul li::after {
 }
 
 .hero-Content .content {
-  background: rgba(54, 56, 58, 0.856);
+  background: rgba(78, 78, 78, 0.74);
   padding: 40px;
   color: white;
   text-align: center;
@@ -169,6 +232,13 @@ header .main-nav ul li::after {
 .hero-Content .content h1 {
   font-size: 3.6rem;
   text-transform: uppercase;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.hero-Content .content p {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .button {
@@ -183,19 +253,21 @@ header .main-nav ul li::after {
 }
 
 #cta-btn {
-  background: #00af17;
+  background: #313131;
   width: 150px;
   color: white;
   position: relative;
+  font-weight: bold;
+  border: 3px solid transparent;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 #cta-btn:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 4px 4px blue;
-          box-shadow: 0 0 4px 4px blue;
 }
 
 #cta-btn:hover {
-  opacity: 0.7;
+  border: 3px dashed white;
 }
 /*# sourceMappingURL=styles.css.map */
