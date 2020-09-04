@@ -42,7 +42,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   z-index: 1;
   position: fixed;
   z-index: 10;
@@ -75,7 +75,7 @@ header .headerTop {
   height: 30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,5 +163,47 @@ header .main-nav ul li::after {
 .hero-Content .content h1 {
   font-size: 4rem;
   text-transform: uppercase;
+}
+
+.test {
+  max-width: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 25%;
+  margin-top: 20px;
+}
+
+.line {
+  width: 100%;
+  background-color: #a3dba3;
+  height: 5px;
+  border-radius: 5px;
+  padding-left: 100%;
+}
+
+.line1 {
+  width: 20px;
+  background-color: #a3dba3;
+  height: 5px;
+  border-radius: 5px;
+  padding-left: 30%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  left: 90%;
+  margin-top: -120px;
+}
+
+.services {
+  margin-top: 30px;
+}
+
+.serve > img {
+  width: 25%;
+  background-color: red;
 }
 /*# sourceMappingURL=styles.css.map */
