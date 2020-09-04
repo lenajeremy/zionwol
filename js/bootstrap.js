@@ -189,7 +189,7 @@
         document.querySelector('.content p').textContent = 'More Than Your Average Engineering Company'
       } else{
         document.querySelectorAll('a.nav-link').forEach(link => link.style.color = 'green')
-        document.querySelector('#cta-btn').style.backgroundColor = 'black';
+        document.querySelector('#cta-btn').style.backgroundColor = 'green';
         document.querySelector('.content p').textContent = 'Where Quality and Integrity is our drive'
       }
     }

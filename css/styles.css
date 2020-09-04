@@ -201,7 +201,7 @@ header .main-nav ul li::after {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   content: '';
-  background: #020074;
+  background: white;
   width: 40px;
   height: 3px;
   margin-right: 10px;
@@ -253,7 +253,7 @@ header .main-nav ul li::after {
 }
 
 #cta-btn {
-  background: #313131;
+  background: green;
   width: 150px;
   color: white;
   position: relative;
@@ -269,5 +269,36 @@ header .main-nav ul li::after {
 
 #cta-btn:hover {
   border: 3px dashed white;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: 60%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background: #020074;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
