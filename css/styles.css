@@ -107,11 +107,16 @@ header {
       align-content: center;
   z-index: 1;
   position: fixed;
+  z-index: 10;
   padding: 20px;
   width: 100vw;
+  height: 70px;
+  background: transparent;
+  z-index: 100000;
 }
 
 header .logo {
+  margin-left: auto;
   height: 100%;
   margin-right: 0;
 }
@@ -300,5 +305,47 @@ header .main-nav ul li::after {
           justify-content: center;
   z-index: 100;
   cursor: pointer;
+}
+
+.test {
+  max-width: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 25%;
+  margin-top: 20px;
+}
+
+.line {
+  width: 100%;
+  background-color: #a3dba3;
+  height: 5px;
+  border-radius: 5px;
+  padding-left: 100%;
+}
+
+.line1 {
+  width: 20px;
+  background-color: #a3dba3;
+  height: 5px;
+  border-radius: 5px;
+  padding-left: 30%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  left: 90%;
+  margin-top: -120px;
+}
+
+.services {
+  margin-top: 30px;
+}
+
+.serve > img {
+  width: 40%;
+  background-color: red;
 }
 /*# sourceMappingURL=styles.css.map */
