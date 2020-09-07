@@ -521,11 +521,27 @@ section#contactUs{
     text-transform: uppercase;
   }
   .form{
+    padding: 30px;
     width: 60%;
     margin: auto;
     background: white;
     display: flex;
-    svg{
+    align-items: center;
+
+    .left-image{
+      position: relative;
+      svg{
+        text-shadow: 0px 0px 5px gray;
+        font-size: 230px;
+        padding-right: 20px;
+        color: green;
+      }
+    }
+    .main-form{
+      border-left: 1px solid green;
+      width:80%;
+      margin-left: auto;
+      padding: 20px;
       
     }
   }
