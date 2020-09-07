@@ -63,6 +63,11 @@ document.querySelector(".carousel-control-prev").onclick = carouselControls;
     });
   };
 
+//   baguetteBox.run('.tz-gallery', {
+//     animation: 'fadeIn',
+//     noScrollbars: true
+//     });
+
   $.fn.goTo = function () {
     $("html, body").animate(
       {
@@ -215,4 +220,3 @@ document.querySelector('#submit').addEventListener('focus', function(e) {
     }
   });
 });
-
