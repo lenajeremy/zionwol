@@ -513,7 +513,21 @@ a.lightbox-stuff:hover .lightbox-text{
 section#contactUs{
   height: 90vh;
   width: 100%;
-  background: url(../img/zion2.gif) no-repeat;
-  background-position: center right;
-  background-size: cover;
+  background: #e1f3e1;
+
+  .heading{
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  .form{
+    width: 60%;
+    margin: auto;
+    background: white;
+    display: flex;
+    svg{
+      
+    }
+  }
+
 }
