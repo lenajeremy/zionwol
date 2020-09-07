@@ -7,23 +7,72 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.css">
   <script src="js/all.js"></script>
+  <!-- Animation -->
+  <style>
+    @keyframes replacementHeader {
+      0%{
+        display: none;
+      }
+      1%{
+        transform: translateY(-100%);
+      }
+      100%{
+        transform: translateY(0);
+        display: flex;
+      }
+    }
+    #replacementHeader{
+      animation: replacementHeader 0.7s ease-in-out;
+    }
+  </style>
 </head>
 <body>
   <div class="backToTop" onclick="$('body').goTo();return false;">
     <i class="fa fa-chevron-up"></i>
   </div>
-  <header id='header'>
-    <div class="logo">
-      <img src="img/zion-logo.png" alt="">
+
+  <!-- Replacement Header on Scroll -->
+  <header id="replacementHeader">
+    <div class="logo" onanimationstart="this.style.zIndex=1">
+      <img src="img/zion-logo(edited).png" alt="">
     </div>
-    <div class="headerTop">
-      <p id='heroTopLocation'>56, Azikiwe Road, Aba, Abia State</p>
-      |
-      <p id="heroTopEmail">info@webdeves.com</p>
-      |
-      <p id="heroTopTelephone">+234 903 988 5473</p>
-      |
+    <nav class='main-nav'>
+      <ul class="nav-content">
+        <li class="nav-item active"><a class="nav-link" href="#" onclick="$('body').goTo();return false;">Home</a></li>
+        <li class="nav-item"><a href="" class="nav-link" onclick="$('#aboutUs').goTo();return false;">About</a></li>
+        <li class="nav-item"><a href="" onclick="$('#ourServices').goTo();return false;" class="nav-link">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="$('#aboutUs').goTo();return false;">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Original Header that gets loaded to the DOM first -->
+  <header id='header' class=''>
+    <div class="container-fluid d-flex">
+      <div class="logo animated wow fadeInLeft" data-wow-delay=0.2s onanimationstart="this.style.zIndex=1">
+        <img src="img/zion-logo.png" alt="">
+      </div>
+      <nav class='main-nav wow animated fadeInRight' data-wow-delay="0.5s">
+        <ul class="nav-content">
+          <li class="nav-item active"><a class="nav-link" href="#" onclick="$('body').goTo();return false;">Home</a></li>
+          <li class="nav-item"><a href="" class="nav-link" onclick="$('#aboutUs').goTo();return false;">About</a></li>
+          <li class="nav-item"><a href="" onclick="$('#ourServices').goTo();return false;" class="nav-link">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="$('#aboutUs').goTo();return false;">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="toggler">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    
+    <div class="headerTop animated wow fadeInDown" data-wow-delay="0.08s">
+      <p id='heroTopLocation'><i class="fa fa-map-marker-alt"></i> 56, Azikiwe Road, Aba, Abia State</p>
+      <p id="heroTopEmail"><i class="fa fa-envelope"></i> @webdeves.com</p>
+      <p id="heroTopTelephone"><i class="fa fa-phone-alt"></i> +234 903 988 5473</p>
       <div class="heroTopSocials">
         <div class="icon">
           <i class="fab fa-facebook-f"></i>
@@ -36,15 +85,8 @@
         </div>
       </div>
     </div>
-    <nav class='main-nav'>
-      <ul class="nav-content">
-        <li class="nav-item"><a class="nav-link" href="#" onclick="$('body').goTo();return false;">Home</a></li>
-        <li class="nav-item"><a href="/home" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="/home" class="nav-link">Servies</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" onclick="$('#aboutUs').goTo();return false;">Contact Us</a></li>
-      </ul>
-    </nav>
   </header>
+
   <div class="heroImage">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -52,8 +94,12 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item" id="first"></div>
-        <div class="carousel-item active" id="second"></div>
+        <div class="carousel-item" id="first">
+          <div class="overlay"></div>
+        </div>
+        <div class="carousel-item active" id="second">
+          <div class="overlay"></div>
+        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -66,7 +112,7 @@
     </div>
   </div>
   <div class="hero-Content">
-    <div class="content">
+    <div class="content animated fadeIn wow" data-wow-delay="0.7s">
       <h1>ZionWol Solutions</h1>
       <p>More than your average engineering company</p>
       <button class='button' id ='cta-btn' onclick="$('#aboutUs').goTo();return false;">MORE INFO</button>
@@ -75,42 +121,50 @@
   
   <div class="mainArea">
     <section id="aboutUs">
-      <p>Lorem ipsum dolor sit amet consectetur,
-         adipisicing elit. Iste voluptas aliquam 
-         sunt hic neque, exercitationem recusandae
-          assumenda quam mollitia illum? Nam adipisci 
-          earum optio laudantium quos sunt blanditiis 
-          in culpa soluta? Architecto praesentium 
-          earum amet quas esse ratione, facilis nihil 
-          maiores aspernatur voluptatibus labore, culpa, 
-          cumque perferendis necessitatibus quidem officiis 
-          repellat quisquam dolor ducimus doloribus? Ipsam, 
-          praesentium blanditiis, distinctio temporibus 
-          provident rerum, quis dolorem eveniet quos quo 
-          impedit quibusdam recusandae?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum sint dolorum, soluta deleniti reprehenderit eum commodi aut minus eligendi repellat, sunt quas iste omnis vitae animi cumque saepe. Animi error reiciendis quam dolore perspiciatis natus recusandae! Illum modi provident amet nobis odit, minima veritatis quas aliquam voluptatem animi quod? Ratione atque quaerat dolore. Ratione quos earum ut modi ad consequuntur nostrum tenetur exercitationem voluptas temporibus facilis, asperiores eligendi voluptatibus perferendis assumenda incidunt eaque. Voluptas culpa nesciunt sit illum qui dolores impedit est dolorem debitis illo rerum ea, et labore eaque quia excepturi optio omnis maiores nobis necessitatibus pariatur error doloribus hic. Quae quo fugiat, voluptatum atque, provident eaque, dignissimos nam fugit pariatur nemo aliquid illo nihil. Maxime laborum dignissimos, cupiditate sequi quaerat atque voluptatum animi magnam laboriosam minima, fuga quod excepturi exercitationem quis vitae optio numquam, ex minus! Alias, fuga recusandae reprehenderit, vel, natus suscipit praesentium at repellat possimus corrupti voluptas molestiae enim sapiente perferendis! Quis ut inventore reiciendis quibusdam harum tenetur saepe, molestiae nostrum consectetur aliquid placeat, obcaecati numquam culpa dolores amet. Sapiente hic nesciunt, repellendus iste iure perspiciatis excepturi tempore quidem id! Omnis minus quos quis. Quis rem tempore, excepturi consequuntur non deserunt magnam voluptates beatae rerum aspernatur, unde odit est maxime perspiciatis laboriosam reprehenderit natus sit nulla cumque architecto sunt quasi dicta! Esse ullam doloribus minima possimus natus, quis quae eos placeat ratione, laborum dicta commodi, dignissimos corrupti ipsa sit odit et explicabo hic velit debitis sequi! Sint odit velit quod, facilis cumque eum explicabo quam ut necessitatibus sequi enim consequuntur accusantium esse tempora consequatur maiores accusamus voluptate. Quibusdam odit neque sed vel cupiditate temporibus odio iusto quasi inventore enim. Ex obcaecati veniam totam perferendis, veritatis eligendi provident labore tempora, quia delectus tenetur reiciendis illo, voluptatibus maxime at esse a impedit. In est ab nam iste pariatur dolores fuga totam accusamus amet nobis? Numquam, cumque. Odio voluptates, quia accusamus officiis perspiciatis enim sed obcaecati. Totam culpa quidem cumque deserunt blanditiis hic sint reiciendis accusamus voluptatem quis aut voluptas aperiam veniam amet, consequuntur exercitationem. Dolorum aperiam dicta consectetur omnis ut accusantium inventore doloremque amet dolorem et nesciunt illo consequatur eius perferendis odit nobis deleniti voluptas quam, debitis modi libero quasi. Fuga, enim architecto blanditiis explicabo voluptatem eligendi accusamus doloribus inventore incidunt, laboriosam, repellat ullam. Dolor vero tempora incidunt, tempore magnam nemo blanditiis ipsam aperiam, odit earum, rem asperiores quae molestiae corrupti obcaecati? Similique molestias blanditiis saepe fuga, reprehenderit recusandae natus, nihil sed laborum voluptatibus iusto explicabo beatae esse expedita perferendis non numquam, alias architecto odio. Atque quas explicabo, vel officiis velit similique fugiat culpa. Sequi, in accusantium numquam vero nemo optio velit voluptates commodi accusamus repudiandae officiis cum eum deserunt ex dignissimos omnis amet! Corrupti placeat culpa porro nobis enim ipsam illum soluta fugiat nisi repellat neque nulla fugit odio, ea amet animi aspernatur ipsa quos! Corporis debitis dolorem aliquid enim, laboriosam eos sed voluptatibus magnam, aspernatur optio nisi accusamus labore non unde ducimus iure! Animi aliquid beatae ullam, eligendi ducimus deleniti reprehenderit tempore dignissimos nemo doloremque!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, illo! Possimus at magni nisi accusamus fugit nihil id, ad itaque voluptatibus nostrum eligendi porro consequuntur iusto vero aperiam vel debitis quasi sit aspernatur eveniet ratione quos. Ipsum, accusamus vel repellendus quod quas voluptatum rerum neque dignissimos quae natus minima sed nostrum voluptate repellat corporis adipisci molestiae? Facilis quaerat rem saepe mollitia placeat consequuntur eaque, inventore illo. Cupiditate minus aspernatur soluta enim sit dolorum commodi, nobis nesciunt, explicabo at laboriosam dolor ipsa qui inventore, ab porro? Praesentium itaque ducimus nemo nostrum ullam eaque magnam sunt dolorem. Eligendi recusandae ullam, aliquid error magni illum placeat atque sapiente temporibus sunt neque dolores officiis laudantium nemo nihil, illo magnam eius facere tempore. Incidunt temporibus, odit nihil labore, velit fugiat dolorum voluptatibus cum nesciunt soluta excepturi in quod sequi esse iure odio eligendi, atque quae dicta illo! Laborum pariatur repellendus tempora quo sapiente recusandae, eos perferendis incidunt obcaecati fugit, quia inventore blanditiis perspiciatis sint laboriosam vero nulla ducimus, nesciunt nihil quaerat ad vel reiciendis. Eveniet earum praesentium eum perspiciatis ea ullam odio nobis reiciendis sint minima autem officiis aliquam placeat incidunt enim sed molestias rerum, fugiat, explicabo exercitationem inventore animi? Facere doloremque, voluptate debitis sit soluta quae accusantium eaque perferendis necessitatibus commodi, esse, officiis at exercitationem similique aliquam repudiandae ipsum. Minus soluta quis et ab quasi illum doloremque reiciendis aut quibusdam, perspiciatis, labore corrupti animi nobis veniam ducimus recusandae molestias natus deserunt facere excepturi perferendis vero saepe? Repellat voluptatum omnis quam consequatur, commodi deleniti voluptas eum ipsum non! Vel quam mollitia praesentium tenetur eius rerum, recusandae molestiae quae, natus placeat et dolorum perspiciatis, harum sequi doloremque sit voluptatibus consequatur assumenda illo autem! Dolor nemo deserunt saepe ipsam ipsum ab. Ea, atque! Corporis natus ut beatae, sed magnam maiores officia. Cupiditate aliquam deserunt repellendus inventore, provident dolorem laboriosam non eius veritatis dolor hic illum quidem! Exercitationem, eos quibusdam possimus consectetur cupiditate culpa, adipisci natus unde fugit, earum quas esse in laudantium sint reprehenderit debitis mollitia dolor at blanditiis assumenda! Officiis incidunt officia harum vero. Velit aliquid ducimus optio tempore similique cumque, corrupti quibusdam veritatis laboriosam. Ut in neque, repudiandae, ratione, minus ab architecto quam rerum distinctio modi incidunt temporibus? Esse totam consequatur est, qui, dolorem mollitia cupiditate delectus nulla, minima quis iste sit reprehenderit temporibus consectetur veritatis. Sunt fugit iure numquam eaque magni facilis, non incidunt ea quae ex doloribus excepturi similique dolore est, animi, soluta quod laborum at dolor commodi molestias ab culpa! Rerum possimus quasi quis laudantium, quam ut nulla sit odit necessitatibus quod dicta nisi sequi sed mollitia id consectetur temporibus, accusamus nam cum repudiandae quaerat perspiciatis. Maxime voluptates quaerat corporis sequi veritatis officia facere consectetur obcaecati repellat inventore doloremque illo, numquam, eveniet sit earum quidem, aut eos dolorem fugit. Molestias doloremque corrupti, dolor iste, pariatur rerum accusantium in nulla deserunt reprehenderit cumque officia blanditiis delectus asperiores! Tempora labore nulla atque minus incidunt, similique distinctio, ducimus laudantium id excepturi blanditiis vel odit ex modi quia delectus maiores repellat ipsa ad nobis! Libero, quasi.</p>
+      <div class="test container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8">
+            <h1 class='my-md-5 wow animated fadeInUp heading' data-wow-delay="0s">Who We Are??
+              <div class="underline"><div class="triangle"></div></div>
+            </h1>
+            <div class="container">
+              <p class='wow animated fadeInUp' data-wow-delay="1.8"><strong>Zion Solutions LTD.</strong> is a technological company established to provide world class engineering services for Nigeria populace. We offer a range of services covering power and energy, information technology, security and communication. We are one of the leading renewable energy companies in Nigeria, providing a steady power supply to homes and businesses using energy especially the sun. We do installation, repair and maintenance of solar and inverter, CCTV, INTERCOM, satellite TV and electric fence. We also offer services in IT solutions, web designing and computer networking</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 animated wow fadeInLeft" data-wow-delay="0.7s">
+            <div class="container">
+              <img src="img/zion-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ourServices">
+      <div class="test container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <h1 class='my-md-5 wow animated fadeInUp heading' data-wow-delay="0s">What We Do??
+              <div class="underline"><div class="triangle"></div></div>
+            </h1>
+            <div class="container">   
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
-
-       <div class="test">
-         <h2> More Than Your Average Engineering Company</h2>
-         <p><strong>Zion Solutions LTD.(RC 1650253)</strong> is a technological company established to provide world class engineering services for Nigeria populace. We offer a range of services covering power and energy, information technology,security and communication. We are one of the leading renewable energy companies in Nigeria, providing a steady power supply to homes and businesses using energy especially the sun. We do installation, repair and maintenance of solar and inverter, CCTV, INTERCOM, satellite TV and electric fence. We also offer services in IT solutions,Web designing and computer networking</p>
-         <div class="line"></div>
-         <div class="line1"></div>
-        </div>
-
-        <div class="services">
-            <div class="row serve">
-              <div class="col-md-4" ><img src="img/zioncctv.jpg" alt="CCTV camera" width="300"></div>
-              <div class="col-md-4"><img src="img/zionelectric_fence.jpg" width="300" alt="electric fence"></div>
-        </div>
+  <div class="services">
+      <div class="row serve">
+        <div class="col-md-4" ><img src="img/zioncctv.jpg" alt="CCTV camera" width="300"></div>
+        <div class="col-md-4"><img src="img/zionelectric_fence.jpg" width="300" alt="electric fence"></div>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/owl.carousel.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/gsap.js"></script>
+  <!-- <script src="js/gsap.js"></script> -->
+  <script src="js/smoothscroll.js"></script>
   <script src="js/main.js"></script>      
+  </html>
 </body>
-</html>

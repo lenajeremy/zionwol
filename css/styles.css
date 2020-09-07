@@ -1,3 +1,8 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
@@ -61,18 +66,31 @@
   height: 90vh;
 }
 
-header {
-  z-index: 1;
+.carousel-inner .carousel-item {
+  position: relative;
+}
+
+.carousel-inner .carousel-item .overlay {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 88, 88, 0.322);
 }
 
 .heroImage {
-  width: 100%;
+  width: 100vw;
   height: 50%;
   position: absolute;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
 #first {
-  background: url("../img/zion.jpeg");
+  background: url("../img/zion.jpeg"), rgba(0, 88, 88, 0.322);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -86,6 +104,15 @@ header {
   height: 100%;
   width: 100%;
   background-position: center bottom;
+}
+
+@media screen and (max-width: 768px) {
+  #second {
+    background-position: center right;
+  }
+  #first {
+    background-position: right bottom;
+  }
 }
 
 * {
@@ -106,19 +133,16 @@ header {
   -ms-flex-line-pack: center;
       align-content: center;
   z-index: 1;
-  position: fixed;
-  z-index: 10;
-  padding: 20px;
+  position: absolute;
+  padding: 30px;
   width: 100vw;
-  height: 70px;
-  background: transparent;
-  z-index: 100000;
+  top: 0;
+  left: 0;
 }
 
 header .logo {
-  margin-left: auto;
   height: 100%;
-  margin-right: 0;
+  margin-right: auto;
 }
 
 header .logo img {
@@ -131,8 +155,7 @@ header .logo img {
 
 header .headerTop {
   font-size: 14px;
-  background: rgba(0, 145, 133, 0.719);
-  background: #020074;
+  background: rgba(2, 129, 80, 0.753);
   top: 0;
   position: absolute;
   width: 100%;
@@ -149,7 +172,7 @@ header .headerTop {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #d4d4d4;
+  color: white;
   font-weight: bold;
 }
 
@@ -169,7 +192,24 @@ header .headerTop .heroTopSocials {
 }
 
 header .headerTop .heroTopSocials svg {
-  margin: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  header .headerTop {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 13px;
+    padding: 3px;
+    text-align: center;
+  }
+  header .headerTop p {
+    margin-bottom: 0;
+  }
 }
 
 header .main-nav {
@@ -182,9 +222,15 @@ header .main-nav {
           align-items: center;
 }
 
+header .main-nav .toggler {
+  display: none;
+  cursor: pointer;
+}
+
 header .main-nav ul {
   overflow: hidden;
   width: 100%;
+  margin: 0;
 }
 
 header .main-nav ul li {
@@ -199,17 +245,47 @@ header .main-nav ul li a {
   font-weight: bold;
 }
 
-header .main-nav ul li::after {
+header .main-nav ul li.active::after {
   position: absolute;
   bottom: 4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   content: '';
-  background: white;
-  width: 40px;
+  background: #00af17;
+  width: 25px;
   height: 3px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  header .main-nav {
+    background: green;
+    width: 50%;
+    position: absolute;
+    -webkit-animation: none;
+            animation: none;
+    right: 0;
+  }
+  header .main-nav ul {
+    background: red;
+    position: absolute;
+    top: 0px;
+    right: -100%;
+  }
+  header .main-nav ul li {
+    display: block;
+    float: none;
+  }
+  header .main-nav ul li::after {
+    display: none;
+  }
+  header .main-nav .toggler {
+    display: block;
+  }
+  header .logo img {
+    width: 120px;
+  }
 }
 
 .hero-Content {
@@ -228,8 +304,7 @@ header .main-nav ul li::after {
 }
 
 .hero-Content .content {
-  background: rgba(78, 78, 78, 0.74);
-  padding: 40px;
+  padding: 30px;
   color: white;
   text-align: center;
 }
@@ -274,6 +349,7 @@ header .main-nav ul li::after {
 
 #cta-btn:hover {
   border: 3px dashed white;
+  opacity: 0.8;
 }
 
 .carousel-control-next,
@@ -307,24 +383,27 @@ header .main-nav ul li::after {
   cursor: pointer;
 }
 
-.test {
-  max-width: 700px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 25%;
-  margin-top: 20px;
+/* About Us Section */
+#aboutUs {
+  background: #e1f3e1;
+  padding: 80px 0;
 }
 
-.line {
-  width: 100%;
-  background-color: #a3dba3;
-  height: 5px;
-  border-radius: 5px;
-  padding-left: 100%;
+.test h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.test p {
+  text-align: justify;
+  line-height: 1.8rem;
+  font-size: 18px;
+  word-spacing: 3px;
+}
+
+.test img {
+  width: 90%;
 }
 
 .line1 {
@@ -342,10 +421,116 @@ header .main-nav ul li::after {
 
 .services {
   margin-top: 30px;
+  background: red;
 }
 
 .serve > img {
   width: 40%;
-  background-color: red;
+}
+
+.toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.toggler .bar {
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin-bottom: 4px;
+}
+
+.toggler .bar:nth-of-type(3) {
+  width: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 65px 0 0 0;
+  }
+  .hero-Content .content h1 {
+    font-size: 35px;
+  }
+  .hero-Content .content p {
+    font-size: 16px;
+  }
+  .hero-Content .content button#cta-btn {
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+  }
+  .test h1 {
+    font-size: 30px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .test p {
+    font-size: 16px;
+  }
+  .backToTop {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    z-index: 5000;
+  }
+  #aboutUs {
+    padding: 50px 0;
+  }
+}
+
+.heading {
+  position: relative;
+}
+
+.heading .underline {
+  position: absolute;
+  height: 3px;
+  width: 100px;
+  background: #00af17;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -10%;
+}
+
+.heading .underline .triangle {
+  width: 15px;
+  height: 15px;
+  background: green;
+  position: relative;
+  top: -6px;
+  left: 13px;
+}
+
+#ourServices {
+  background: url("../img/zion2.gif") no-repeat fixed;
+  background-position: center right;
+  background-size: cover;
+  height: 80vh;
+}
+
+#replacementHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1000;
+  position: fixed;
+  padding: 15px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: 0px 3px 8px 2px gray;
+          box-shadow: 0px 3px 8px 2px gray;
 }
 /*# sourceMappingURL=styles.css.map */
