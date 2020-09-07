@@ -1,5 +1,5 @@
 html{
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 @font-face{
@@ -79,7 +79,7 @@ $secondaryColor: rgb(0, 255, 64);
   }
 }
 .heroImage{
-  width: 100vw;
+  width: 100%;
   height: 50%;
   position: absolute;
 }
@@ -124,7 +124,7 @@ header{
   z-index:1;
   position: absolute;
   padding: 30px;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   .logo{
@@ -336,28 +336,25 @@ header{
     width: 90%;
   }
 }
-// .line{
-//   width: 100%;
-//   background-color:rgb(163, 219, 163);
-//   height: 5px;
-//   border-radius: 5px;
-//   padding-left: 100%;
-// }
+.line{
+  width: 100%;
+  background-color:rgb(163, 219, 163);
+  height: 5px;
+ border-radius: 5px;
+   padding-left: 100%;
+ }
 .line1{
-  width: 20px;
+  width: 220px;
   background-color:rgb(163, 219, 163);
   height: 5px;
   border-radius: 5px;
-  padding-left: 30%;
   transform: rotate(90deg);
   position: absolute;
-  left: 90%;
+  left: 64%;
   margin-top: -120px;
 }
 .services{
-<<<<<<< HEAD
   margin-top: 30px;
-  background: red;
 }
 .serve > img{
   width: 40%;
@@ -374,7 +371,6 @@ header{
   .bar:nth-of-type(3){
     width: 16px;
   }
-  
 }
 @media screen and (max-width: 768px){
   header{
@@ -404,9 +400,9 @@ header{
       font-size: 16px;
     }
     img{
-      // width: 70%;
-      // margin: auto;
-      // visibility: hidden;
+       width: 70%;
+      margin: auto;
+       visibility: hidden;
     }
   }
   .backToTop{
@@ -452,16 +448,16 @@ header{
   z-index:1000;
   position: fixed;
   padding: 15px;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   background: white;
   border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 30px;
+  border-bottom-right-radius: 15px;
   box-shadow: 0px 3px 8px 2px gray;
 }
-=======
-    margin-top: 60px;
+.page{
+   margin-top: 60px;
     margin-left: 200px;
 }
 .serve *{
@@ -480,6 +476,8 @@ header{
   position: relative;
   z-index: 10;
   overflow: hidden;
+  padding: 20px;
+  width: 30%;
 }
 .pic-description{
   position: absolute;
@@ -671,4 +669,3 @@ body {
   //   position: absolute;
   //   bottom: 0;
   // }
->>>>>>> b3ca595017d2c32d1c657144cc5ec9936ec2d5c4
