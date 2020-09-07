@@ -104,6 +104,7 @@ window.onscroll = function(){
   }
 }
 
+
 let replacementHeader = document.querySelector('#replacementHeader');
 let normalHeader = document.querySelector('#header');
 
@@ -122,3 +123,96 @@ function setActive(tobeActiveElement, parent){
 function findElement(tobeActiveElement){
   return Array.from(document.querySelectorAll('.nav-item')).find(item => item.firstElementChild.textContent == tobeActiveElement.firstElementChild.textContent && item != tobeActiveElement)
 }
+
+TweenMax.from(".content", 0.2, {
+    delay: 0.5,
+    x:"100%",
+    ease: Expo.easeInOut
+});
+TweenMax.from(".test", 0.5, {
+    delay: 2,
+    x:"-200%",
+    ease: Expo.easeInOut
+});
+TweenMax.from("#zion", 0.5, {
+    delay: 2,
+    x:"700%",
+    ease: Expo.easeInOut
+});
+TweenMax.from("#aboutUs>p", 0.5, {
+    delay: 2,
+    x:"-200%",
+    ease: Expo.easeInOut
+});
+
+
+
+// FORM
+var current = null;
+document.querySelector('#name').addEventListener('focus', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: 0,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '240 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+
+document.querySelector('#email').addEventListener('focus', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: 0,
+      duration: 10,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '240 1386',
+      duration: -100,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+
+document.querySelector('#field').addEventListener('focus', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: -336,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '240 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+document.querySelector('#submit').addEventListener('focus', function(e) {
+  if (current) current.pause();
+  current = anime({
+    targets: 'path',
+    strokeDashoffset: {
+      value: -730,
+      duration: 700,
+      easing: 'easeOutQuart'
+    },
+    strokeDasharray: {
+      value: '530 1386',
+      duration: 700,
+      easing: 'easeOutQuart'
+    }
+  });
+});
+
