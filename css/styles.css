@@ -633,6 +633,7 @@ section#contactUs .heading {
 }
 
 section#contactUs .form {
+  padding: 30px;
   width: 60%;
   margin: auto;
   margin-top: 50px;
@@ -640,6 +641,27 @@ section#contactUs .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#contactUs .form .left-image {
+  position: relative;
+}
+
+section#contactUs .form .left-image svg {
+  text-shadow: 0px 0px 5px gray;
+  font-size: 230px;
+  padding-right: 20px;
+  color: green;
+}
+
+section#contactUs .form .main-form {
+  border-left: 1px solid green;
+  width: 80%;
+  margin-left: auto;
+  padding: 20px;
 }
 
 section#contactUs .form svg {
