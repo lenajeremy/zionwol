@@ -523,10 +523,12 @@ section#contactUs{
   .form{
     width: 60%;
     margin: auto;
+    margin-top: 50px;
     background: white;
     display: flex;
     svg{
-      
+      color: green;
+      font-size: 260px;
     }
   }
 

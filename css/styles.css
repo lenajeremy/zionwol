@@ -635,9 +635,15 @@ section#contactUs .heading {
 section#contactUs .form {
   width: 60%;
   margin: auto;
+  margin-top: 50px;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section#contactUs .form svg {
+  color: green;
+  font-size: 260px;
 }
 /*# sourceMappingURL=styles.css.map */
