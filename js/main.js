@@ -84,7 +84,7 @@ document.querySelector(".carousel-control-prev").onclick = carouselControls;
 })();
 
 if(window.innerWidth < 740){
-    document.querySelector('.logo img').src = 'img/zion-logo(edited).png'
+    document.querySelector('header#header .logo img').src = 'img/zion-logo(edited).png'
 }
 
 document.querySelector('#replacementHeader').style.display = 'none';

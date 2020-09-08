@@ -85,7 +85,12 @@ html {
   position: absolute;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -282,7 +287,7 @@ header .main-nav ul li.active::after {
   header .main-nav ul li::after {
     display: none;
   }
-  header .main-nav .toggler {
+  header .toggler {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -444,6 +449,7 @@ header .main-nav ul li.active::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .toggler .bar {
@@ -451,6 +457,10 @@ header .main-nav ul li.active::after {
   height: 2px;
   background: white;
   margin-bottom: 4px;
+}
+
+.toggler .bar:nth-of-type(1) {
+  width: 20px;
 }
 
 .toggler .bar:nth-of-type(3) {
@@ -484,7 +494,7 @@ header .main-nav ul li.active::after {
   .test img {
     width: 70%;
     margin: auto;
-    visibility: hidden;
+    display: block;
   }
   .backToTop {
     width: 30px;
@@ -542,6 +552,9 @@ header .main-nav ul li.active::after {
   position: fixed;
   padding: 15px;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   left: 0;
   background: white;
@@ -549,6 +562,10 @@ header .main-nav ul li.active::after {
   border-bottom-right-radius: 15px;
   -webkit-box-shadow: 0px 3px 8px 2px gray;
           box-shadow: 0px 3px 8px 2px gray;
+}
+
+#replacementHeader .toggler .bar {
+  background: green;
 }
 
 a.lightbox-stuff {
@@ -664,8 +681,14 @@ section#contactUs .form .main-form {
   padding: 20px;
 }
 
-section#contactUs .form svg {
-  color: green;
-  font-size: 260px;
+iframe {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .tz-gallery div div a {
+    margin: auto;
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
