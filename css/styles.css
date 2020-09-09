@@ -706,54 +706,36 @@ section#contactUs .form .main-form button:hover {
 }
 
 footer {
-  background: #285028;
-  margin-top: -20px;
-}
-
-footer .end h2 {
-  text-align: center;
-  color: #fff;
-}
-
-footer .end .least {
-  text-align: center;
+  position: relative;
 }
 
 footer iframe {
   display: block;
-  height: 500px;
+  height: 400px;
   width: 100%;
   border: 2px solid white;
 }
 
-footer .list {
-  margin: 50px;
-}
-
-footer .list p {
-  max-width: 400px;
-}
-
-footer .share {
-  margin-left: 60px;
-  margin-top: 50px;
-  color: #fff;
-}
-
-footer .share .i {
-  height: 2px;
-  background-color: #626060;
-  border-radius: 50%;
-  width: 15%;
+footer .least {
+  width: 100%;
   text-align: center;
+  margin-top: 20px;
+  background: darkgreen;
+  padding: 10px;
 }
 
-footer .share p {
-  font-weight: 700;
+footer .least p {
+  margin: 0;
+  font-weight: lighter;
+  color: white;
 }
 
-footer .share .btn {
-  border: 1px solid black;
-  margin-top: -10px;
+footer .least p a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .least p a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

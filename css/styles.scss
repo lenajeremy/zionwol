@@ -664,56 +664,30 @@ section#contactUs {
 }
 
 footer {
-  background: rgb(40, 80, 40);
-  margin-top: -20px;
-  .end {
-    h2 {
-      text-align: center;
-      color: #fff;
-    }
-
-    .least {
-      text-align: center;
-    }
-  }
-
+  position: relative;
   iframe {
     display: block;
-    height: 500px;
+    height: 400px;
     width: 100%;
     border: 2px solid white;
-  }
-
-  .list {
-    margin: 50px;
-
-    p {
-      max-width: 400px;
-    }
-  }
-
-  .share {
-    margin-left: 60px;
-    margin-top: 50px;
-    // width: 500px;
-    color: #fff;
-
-    .i {
-      height: 2px;
-      background-color: rgb(98, 96, 96);
-      border-radius: 50%;
-      width: 15%;
-      text-align: center;
-
-    }
-
-    p {
-      font-weight: 700;
-    }
-
-    .btn {
-      border: 1px solid black;
-      margin-top: -10px;
-    }
-  }
+ } 
+ .least{
+   width: 100%;
+   text-align: center;
+   margin-top: 20px;
+   background: darkgreen;
+   padding: 10px;
+   p{
+     margin: 0;
+     font-weight: lighter;
+     color: white;
+     a{
+       color: white;
+       text-decoration: none;
+     }
+     a:hover{
+       text-decoration: underline;
+     }
+   }
+ }
 }
