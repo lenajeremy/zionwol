@@ -55,7 +55,7 @@ html {
 $primaryColor: rgb(2, 0, 116);
 $buttonColor: rgb(0, 175, 23);
 $paragraphTextColor: #353535;
-$overlayColor: rgba(0, 88, 88, 0.322);
+$overlayColor: rgba(0, 88, 88, 0.425);
 $headerFont: 'Times New Roman',
 Times,
 serif;
@@ -252,21 +252,20 @@ header {
 
   @media screen and (max-width: 768px) {
     .main-nav {
-      background: green;
       width: 50%;
       position: absolute;
       animation: none;
       right: 0;
+      top: -32px;
     }
 
     .main-nav ul {
-      background: red;
       position: absolute;
       top: 0px;
-      right: -100%;
+      // right: -100%;
+      left: 0;
 
       li {
-        display: block;
         float: none;
       }
 
@@ -299,7 +298,7 @@ header {
     text-align: center;
 
     h1 {
-      font-size: 3.6rem;
+      font-size: 4rem;
       text-transform: uppercase;
       font-weight: bold;
       font-family: serif;
@@ -447,7 +446,6 @@ header {
     h1 {
       font-size: 35px;
     }
-
     p {
       font-size: 16px;
     }
@@ -462,7 +460,6 @@ header {
   .test {
     h1 {
       font-size: 30px;
-      font-family: 'Open Sans';
       font-weight: bold;
       margin-bottom: 20px;
     }
@@ -553,6 +550,7 @@ a.lightbox-stuff {
   border: 3px solid $primaryColor;
   background-size: cover;
   text-decoration: none;
+  position: relative;
 }
 
 a.lightbox-stuff#one {
@@ -586,11 +584,16 @@ a.lightbox-stuff#two {
 
 a.lightbox-stuff .lightbox-text {
   opacity: 0;
-  transform: translateY(20%);
+  visibility: hidden;
+  height: 0px;
   transition: all 0.5s;
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
 }
 
 a.lightbox-stuff:hover .lightbox-text {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0%);
   display: block;

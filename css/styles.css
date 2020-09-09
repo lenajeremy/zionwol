@@ -76,7 +76,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 88, 88, 0.322);
+  background: rgba(0, 88, 88, 0.425);
 }
 
 .heroImage {
@@ -95,7 +95,7 @@ h6 {
 }
 
 #first {
-  background: url("../img/zion.jpeg"), rgba(0, 88, 88, 0.322);
+  background: url("../img/zion.jpeg"), rgba(0, 88, 88, 0.425);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -267,21 +267,19 @@ header .main-nav ul li.active::after {
 
 @media screen and (max-width: 768px) {
   header .main-nav {
-    background: green;
     width: 50%;
     position: absolute;
     -webkit-animation: none;
             animation: none;
     right: 0;
+    top: -32px;
   }
   header .main-nav ul {
-    background: red;
     position: absolute;
     top: 0px;
-    right: -100%;
+    left: 0;
   }
   header .main-nav ul li {
-    display: block;
     float: none;
   }
   header .main-nav ul li::after {
@@ -319,7 +317,7 @@ header .main-nav ul li.active::after {
 }
 
 .hero-Content .content h1 {
-  font-size: 3.6rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
   font-family: serif;
@@ -484,7 +482,6 @@ header .main-nav ul li.active::after {
   }
   .test h1 {
     font-size: 30px;
-    font-family: 'Open Sans';
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -575,6 +572,7 @@ a.lightbox-stuff {
   border: 3px solid #020074;
   background-size: cover;
   text-decoration: none;
+  position: relative;
 }
 
 a.lightbox-stuff#one {
@@ -608,13 +606,17 @@ a.lightbox-stuff#two {
 
 a.lightbox-stuff .lightbox-text {
   opacity: 0;
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
+  visibility: hidden;
+  height: 0px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
 }
 
 a.lightbox-stuff:hover .lightbox-text {
+  visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
