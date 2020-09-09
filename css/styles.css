@@ -76,7 +76,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 88, 88, 0.322);
+  background: rgba(0, 88, 88, 0.425);
 }
 
 .heroImage {
@@ -85,12 +85,17 @@ html {
   position: absolute;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Times New Roman", Times, serif;
 }
 
 #first {
-  background: url("../img/zion.jpeg"), rgba(0, 88, 88, 0.322);
+  background: url("../img/zion.jpeg"), rgba(0, 88, 88, 0.425);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -262,27 +267,25 @@ header .main-nav ul li.active::after {
 
 @media screen and (max-width: 768px) {
   header .main-nav {
-    background: green;
     width: 50%;
     position: absolute;
     -webkit-animation: none;
             animation: none;
     right: 0;
+    top: -32px;
   }
   header .main-nav ul {
-    background: red;
     position: absolute;
     top: 0px;
-    right: -100%;
+    left: 0;
   }
   header .main-nav ul li {
-    display: block;
     float: none;
   }
   header .main-nav ul li::after {
     display: none;
   }
-  header .main-nav .toggler {
+  header .toggler {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -314,7 +317,7 @@ header .main-nav ul li.active::after {
 }
 
 .hero-Content .content h1 {
-  font-size: 3.6rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
   font-family: serif;
@@ -444,6 +447,7 @@ header .main-nav ul li.active::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .toggler .bar {
@@ -451,6 +455,10 @@ header .main-nav ul li.active::after {
   height: 2px;
   background: white;
   margin-bottom: 4px;
+}
+
+.toggler .bar:nth-of-type(1) {
+  width: 20px;
 }
 
 .toggler .bar:nth-of-type(3) {
@@ -474,7 +482,6 @@ header .main-nav ul li.active::after {
   }
   .test h1 {
     font-size: 30px;
-    font-family: 'Open Sans';
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -484,7 +491,7 @@ header .main-nav ul li.active::after {
   .test img {
     width: 70%;
     margin: auto;
-    visibility: hidden;
+    display: block;
   }
   .backToTop {
     width: 30px;
@@ -542,6 +549,9 @@ header .main-nav ul li.active::after {
   position: fixed;
   padding: 15px;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   left: 0;
   background: white;
@@ -551,6 +561,10 @@ header .main-nav ul li.active::after {
           box-shadow: 0px 3px 8px 2px gray;
 }
 
+#replacementHeader .toggler .bar {
+  background: green;
+}
+
 a.lightbox-stuff {
   display: block;
   width: 350px;
@@ -558,6 +572,7 @@ a.lightbox-stuff {
   border: 3px solid #020074;
   background-size: cover;
   text-decoration: none;
+  position: relative;
 }
 
 a.lightbox-stuff#one {
@@ -591,13 +606,17 @@ a.lightbox-stuff#two {
 
 a.lightbox-stuff .lightbox-text {
   opacity: 0;
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
+  visibility: hidden;
+  height: 0px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  position: absolute;
+  bottom: 0px;
+  margin: 0;
 }
 
 a.lightbox-stuff:hover .lightbox-text {
+  visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -627,44 +646,68 @@ section#contactUs {
 }
 
 section#contactUs .heading {
-  text-align: center;
   font-weight: bolder;
   text-transform: uppercase;
+  text-align: center;
 }
 
 section#contactUs .form {
   padding: 30px;
-  width: 60%;
-  margin: auto;
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section#contactUs .form .left-image {
-  position: relative;
-}
-
-section#contactUs .form .left-image svg {
-  text-shadow: 0px 0px 5px gray;
-  font-size: 230px;
-  padding-right: 20px;
-  color: green;
 }
 
 section#contactUs .form .main-form {
-  border-left: 1px solid green;
-  width: 80%;
-  margin-left: auto;
-  padding: 20px;
+  width: 100%;
+}
+
+section#contactUs .form .main-form input.form-control, section#contactUs .form .main-form textarea.form-control {
+  border-radius: 0;
+  height: 50px;
+  font-size: 14px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section#contactUs .form .main-form textarea.form-control {
+  height: 130px;
+}
+
+section#contactUs .form .main-form input.form-control:focus, section#contactUs .form .main-form textarea.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-left: 2px solid darkgreen;
+}
+
+section#contactUs .form .main-form input.form-control:hover, section#contactUs .form .main-form textarea.form-control:hover {
+  background: #f1f1f1;
+}
+
+section#contactUs .form .main-form button {
+  border: 2px solid darkgreen;
+  border-radius: 10rem;
+  font-weight: bold;
+  width: 130px;
+  background: white;
+  color: darkgreen;
+  height: 40px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+section#contactUs .form .main-form button:hover {
+  background: darkgreen;
+  color: white;
+}
+
+.second {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer {
   background: #285028;
+  margin-top: -20px;
 }
 
 footer .end h2 {
@@ -676,21 +719,28 @@ footer .end .least {
   text-align: center;
 }
 
-.list {
+footer iframe {
+  display: block;
+  height: 500px;
+  width: 100%;
+  border: 2px solid white;
+}
+
+footer .list {
   margin: 50px;
 }
 
-.list p {
+footer .list p {
   max-width: 400px;
 }
 
-.share {
+footer .share {
   margin-left: 60px;
   margin-top: 50px;
   color: #fff;
 }
 
-.share .i {
+footer .share .i {
   height: 2px;
   background-color: #626060;
   border-radius: 50%;
@@ -698,11 +748,11 @@ footer .end .least {
   text-align: center;
 }
 
-.share p {
+footer .share p {
   font-weight: 700;
 }
 
-.share .btn {
+footer .share .btn {
   border: 1px solid black;
   margin-top: -10px;
 }
