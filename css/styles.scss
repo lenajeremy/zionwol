@@ -446,6 +446,7 @@ header {
     h1 {
       font-size: 35px;
     }
+
     p {
       font-size: 16px;
     }
@@ -649,12 +650,54 @@ section#contactUs {
   }
 }
 
-iframe {
-  display: block;
-}
-@media screen and (max-width: 768px){
-  .tz-gallery div div a{
-    margin: auto;
-    width: 95%
+footer {
+  background: rgb(40, 80, 40);
+
+  .end {
+    h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .least {
+      text-align: center;
+    }
+  }
+
+  iframe {
+    display: block;
+  }
+
+  .list {
+    margin: 50px;
+
+    p {
+      max-width: 400px;
+    }
+  }
+
+  .share {
+    margin-left: 60px;
+    margin-top: 50px;
+    width: 500px;
+    color: #fff;
+
+    .i {
+      height: 2px;
+      background-color: rgb(98, 96, 96);
+      border-radius: 50%;
+      width: 15%;
+      text-align: center;
+
+    }
+
+    p {
+      font-weight: 700;
+    }
+
+    .btn {
+      border: 1px solid black;
+      margin-top: -10px;
+    }
   }
 }

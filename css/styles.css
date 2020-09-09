@@ -683,14 +683,52 @@ section#contactUs .form .main-form {
   padding: 20px;
 }
 
-iframe {
+footer {
+  background: #285028;
+}
+
+footer .end h2 {
+  text-align: center;
+  color: #fff;
+}
+
+footer .end .least {
+  text-align: center;
+}
+
+footer iframe {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  .tz-gallery div div a {
-    margin: auto;
-    width: 95%;
-  }
+footer .list {
+  margin: 50px;
+}
+
+footer .list p {
+  max-width: 400px;
+}
+
+footer .share {
+  margin-left: 60px;
+  margin-top: 50px;
+  width: 500px;
+  color: #fff;
+}
+
+footer .share .i {
+  height: 2px;
+  background-color: #626060;
+  border-radius: 50%;
+  width: 15%;
+  text-align: center;
+}
+
+footer .share p {
+  font-weight: 700;
+}
+
+footer .share .btn {
+  border: 1px solid black;
+  margin-top: -10px;
 }
 /*# sourceMappingURL=styles.css.map */
