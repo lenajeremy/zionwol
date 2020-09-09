@@ -662,4 +662,49 @@ section#contactUs .form .main-form {
   margin-left: auto;
   padding: 20px;
 }
+
+footer {
+  background: #285028;
+}
+
+footer .end h2 {
+  text-align: center;
+  color: #fff;
+}
+
+footer .end .least {
+  text-align: center;
+}
+
+.list {
+  margin: 50px;
+}
+
+.list p {
+  max-width: 400px;
+}
+
+.share {
+  margin-left: 60px;
+  margin-top: 50px;
+  width: 500px;
+  color: #fff;
+}
+
+.share .i {
+  height: 2px;
+  background-color: #626060;
+  border-radius: 50%;
+  width: 15%;
+  text-align: center;
+}
+
+.share p {
+  font-weight: 700;
+}
+
+.share .btn {
+  border: 1px solid black;
+  margin-top: -10px;
+}
 /*# sourceMappingURL=styles.css.map */
