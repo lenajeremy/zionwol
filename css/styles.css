@@ -714,18 +714,20 @@ section#contactUs .form .main-form button:hover {
           flex-direction: column;
 }
 
-footer {
+footer, #ourServices {
   position: relative;
+  background: url(../img/contact-bg.jpg) fixed;
+  background-position: bottom left;
 }
 
-footer iframe {
+footer iframe, #ourServices iframe {
   display: block;
   height: 400px;
   width: 100%;
   border: 2px solid white;
 }
 
-footer .least {
+footer .least, #ourServices .least {
   width: 100%;
   text-align: center;
   margin-top: 20px;
@@ -733,18 +735,18 @@ footer .least {
   padding: 10px;
 }
 
-footer .least p {
+footer .least p, #ourServices .least p {
   margin: 0;
   font-weight: lighter;
   color: white;
 }
 
-footer .least p a {
+footer .least p a, #ourServices .least p a {
   color: white;
   text-decoration: none;
 }
 
-footer .least p a:hover {
+footer .least p a:hover, #ourServices .least p a:hover {
   text-decoration: underline;
 }
 

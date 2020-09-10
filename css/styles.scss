@@ -670,8 +670,11 @@ section#contactUs {
   flex-direction: column;
 }
 
-footer {
+footer, #ourServices{
   position: relative;
+  background: url(../img/contact-bg.jpg) fixed;
+  background-position: bottom left;
+
   iframe {
     display: block;
     height: 400px;
