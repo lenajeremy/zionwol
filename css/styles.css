@@ -905,8 +905,10 @@ footer .least p a:hover, #ourServices .least p a:hover {
 
 .main h3 {
   font-weight: 600;
+  text-transform: uppercase;
   color: #ffffff;
   font-size: 50px;
+  letter-spacing: 2px;
 }
 
 .main #item1 {
