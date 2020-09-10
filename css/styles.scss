@@ -543,10 +543,14 @@ header {
     }
   }
 }
-
+.wrapper{
+  width: 70%;
+  margin: auto;
+}
 a.lightbox-stuff {
   display: block;
   width: 350px;
+  margin: auto;
   height: 250px;
   border: 3px solid $primaryColor;
   background-size: cover;
@@ -637,7 +641,6 @@ section#contactUs {
         height: 130px;
       }
       input.form-control:focus, textarea.form-control:focus{
-        box-shadow: none;
         border: 2px solid darkgreen;
         box-shadow: inset 3px 0px 7px gray!important;
       }
@@ -646,9 +649,11 @@ section#contactUs {
       }
       button{
         border: 2px solid darkgreen;
-        border-radius: 10rem;
+        border-radius: 0;
         font-weight: bold;
         width: 130px;
+        margin-left: 0!important;
+        margin-top: 30px;
         background: white;
         color: darkgreen;
         height: 40px;
@@ -693,52 +698,91 @@ footer {
    }
  }
 }
-.share{
-  .btn{
-    border: 1px solid black;
+.btn{
+  display: flex;
+  width: 70px;
+  height: 70px;
+  background: #e1f3e1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  align-items: center;
+  justify-content: center;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+}
+.btn svg{
+  line-height: 90px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+.btn:hover svg{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  background: green;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa{
+  0%{
+    left: -110%;
+    top: 90%;
+  }
+  50%{
+    left: 10%;
+    top: -30%;
+  }
+  100%{
+    top: -10%;
+    left: -10%;
   }
 }
-
-// ABOUT
-.main{
-  #main1{
-
-    background: url('../img/zion2.gif');
-    //background-color: red;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 100%;
-    background-position: center bottom;
- }
- h3{
-   text-align: center;
-   padding: 20px;
- }
- #item1{
-   width: 300px;
-   margin-left: 200px;
- }
- .item2{
-   margin-left: -200px;
- }
-}
-.text{
-  margin-top: 50px;
-   justify-content: center;
+.second-footer-col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   p{
-    padding-left: 50px;
-    font-weight: 600;
-    font-style: normal;
-    padding-right: 50px;
-
+    text-align: center;
+    svg{
+      width: 100%!important;
+    }
   }
 }
-.middle{
-  padding-top: 20px;
-  p,h3{
-    padding-left: 50px;
-    font-weight: 600;
-    font-style: normal;
-  }
+.end-text{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  right: 0;
+  transform: rotate(-90deg) translateY(50%);
+  bottom: 50%;
+  margin: 0;
+}
+.end-text#big{
+  font-size: 30px;
+  font-weight:bold;
+  right: 3rem;
+}
+.end-text#small{
+  font-size: 13px;
+  right: 2.1rem;
+}
+.end-text#social{
+  right:-3rem;
+  font-weight: bold;
+  font-size: 20px;
+  font-weight:bold;
 }
