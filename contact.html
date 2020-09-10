@@ -9,6 +9,28 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animate.css">
+  <style>
+    #first {
+      background: url('../img/contact_her.jpg');      
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-position: center left;
+    }
+
+    #second {
+      background: url('../img/contact_her.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-position: center bottom;
+    }
+    header .main-nav ul li a {
+      color: white!important;
+    }
+  </style>
   <script src="js/all.js"></script>
 
   <!-- Animation -->
@@ -42,10 +64,10 @@
     </div>
     <nav class='main-nav'>
       <ul class="nav-content">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="" onclick="$('#ourServices').goTo();return false;" class="nav-link">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item active"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
     <div class="toggler">
@@ -95,7 +117,7 @@
   </header>
 
   <div class="heroImage">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselFade" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -120,78 +142,17 @@
   </div>
   <div class="hero-Content">
     <div class="content animated fadeIn wow" data-wow-delay="0.7s">
-      <h1>ZionWol Solutions</h1>
-      <p>More than your average engineering company</p>
-      <button class='button' id ='cta-btn'>MORE INFO</button>
+      <h1>CONTACT US</h1>
     </div>
   </div>
-  
+
+  <!-- Main Area -->
   <div class="mainArea">
-    <section id="aboutUs">
-      <div class="test">
-        <h1 class='mb-md-5 wow animated fadeInUp heading' data-wow-delay="0s">Who We Are??
-          <div class="underline"><div class="triangle"></div></div>
-        </h1>
-        <div class="row align-items-center">
-          <div class="col-12 col-md-8">
-            <div class="wrapper">
-              <p class='wow animated fadeInUp' data-wow-delay="1.8"><strong>Zion Solutions LTD.</strong> is a technological company established to provide world class engineering services for Nigeria populace. We offer a range of services covering power and energy, information technology, security and communication. We are one of the leading renewable energy companies in Nigeria, providing a steady power supply to homes and businesses using energy especially the sun. We do installation, repair and maintenance of solar and inverter, CCTV, INTERCOM, satellite TV and electric fence. We also offer services in IT solutions, web designing and computer networking</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 animated wow fadeInLeft" data-wow-delay="0.7s">
-              <img src="img/zion-logo.png" alt="logo">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="ourServices">
-      <div class="test container">
-        <div class="row align-items-center">
-          <h1 class='my-md-5 my-4 wow animated fadeInUp heading' data-wow-delay="0s">What We Do??
-            <div class="underline"><div class="triangle"></div></div>
-          </h1>
-          <div class="wedo">
-            <div class="container tz-gallery">
-              <div class="row">
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.2s">
-                  <a href="img/800px-Solar_panels_on_a_roof.jpg" class="lightbox lightbox-stuff" id = one>
-                    <p class="lightbox-text">SOLAR PANEL INSTALLATION</p>
-                  </a>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.4s">
-                  <a href="img/zion workers.jpg" class="lightbox lightbox-stuff" id = two>
-                    <p class="lightbox-text">ELECTRICAL ENGINEERING</p></a>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.6s">
-                  <a href="img/electric fence.jpeg" class="lightbox lightbox-stuff" id = three>
-                    <p class="lightbox-text">ELECRIC FENCE</p></a>
-                </div>
-              </div>
-              <div class="row mt-3">
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.8s">
-                  <a href="img/cctv to use.png" class="lightbox lightbox-stuff" id = four>
-                    <p class="lightbox-text">CCTV CAMERAS</p></a>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="1.0s">
-                  <a href="img/zion-intercom.png" class="lightbox lightbox-stuff" id = five>
-                    <p class="lightbox-text">INTERCOM</p></a>
-                </div>
-                <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="1.2s">
-                  <a href="img/zion-satellite.png" class="lightbox lightbox-stuff" id = six>
-                  <p class="lightbox-text">SATELLITE</p></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Contact Form -->
     <section id="contactUs" class='p-5'>
-      <h1 class="heading">Contact Us</h1>
       <div class="row">
         <div class="col-md-7">
-          <form action="https://www.stuff.com" class="form">
+          <form action="mailto:jeremiahlena13@gmail.com" method="POST" class="form">
             <p class="lead font-weight-bold">Leave A Message</p>
             <div class="main-form">
               <div class="input-group">
