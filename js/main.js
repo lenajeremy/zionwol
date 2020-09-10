@@ -18,8 +18,14 @@ function carouselControls() {
       "Where Quality and Integrity is our drive...";
   }
 }
-document.querySelector(".carousel-control-next").onclick = carouselControls;
-document.querySelector(".carousel-control-prev").onclick = carouselControls;
+let prevBtn = document.querySelector(".carousel-control-next")
+if(prevBtn){
+  prevBtn.onclick = carouselControls;
+}
+let nextBtn = document.querySelector(".carousel-control-prev")
+if(nextBtn){
+  nextBtn.onclick = carouselControls;
+}
 (function () {
   "use strict";
 
