@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scalee=1.0">
+  <title>ZionWol Solutions</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/all.js"></script>
+
+  <!-- Animation -->
+  <style>
+    @keyframes replacementHeader {
+      0%{
+        display: none;
+      }
+      1%{
+        transform: translateY(-100%);
+      }
+      100%{
+        transform: translateY(0);
+        display: flex;
+      }
+    }
+    #replacementHeader{
+      animation: replacementHeader 0.7s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="backToTop" onclick="$('body').goTo();return false;">
+    <i class="fa fa-chevron-up"></i>
+  </div>
+
+  <!-- Replacement Header on Scroll -->
+  <header id="replacementHeader">
+    <div class="logo" onanimationstart="this.style.zIndex=1">
+      <img src="img/zion-logo(edited).png" alt="">
+    </div>
+    <nav class='main-nav'>
+      <ul class="nav-content">
+        <li class="nav-item active"><a class="nav-link" href="#" onclick="$('body').goTo();return false;">Home</a></li>
+        <li class="nav-item"><a href="" class="nav-link" onclick="$('#aboutUs').goTo();return false;">About</a></li>
+        <li class="nav-item"><a href="" onclick="$('#ourServices').goTo();return false;" class="nav-link">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="$('#aboutUs').goTo();return false;">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="toggler">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+
+  <!-- Original Header that gets loaded to the DOM first -->
+  <header id='header' class=''>
+    <div class="container-fluid d-flex mt-3 mt-md-0">
+      <div class="logo animated wow fadeInLeft" data-wow-delay=0.2s onanimationstart="this.style.zIndex=1">
+        <img src="img/zion-logo.png" alt="">
+      </div>
+      <nav class='main-nav wow animated fadeInRight' data-wow-delay="0.5s">
+        <ul class="nav-content">
+          <li class="nav-item active"><a class="nav-link" href="#" onclick="$('body').goTo();return false;">Home</a></li>
+          <li class="nav-item"><a href="" class="nav-link" onclick="$('#aboutUs').goTo();return false;">About</a></li>
+          <li class="nav-item"><a href="" onclick="$('#ourServices').goTo();return false;" class="nav-link">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="$('#aboutUs').goTo();return false;">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="toggler">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    
+    <div class="headerTop animated wow fadeInDown" data-wow-delay="0.08s">
+      <p id='heroTopLocation'><i class="fa fa-map-marker-alt"></i> Suite 29, Lord Reign Plaza, opp.Anchor University, Ayobo, Lagos State.</p>
+      <p id="heroTopEmail"><i class="fa fa-envelope"></i> @ZIONWORL SOLUTION LIMITED.com</p>
+      <p id="heroTopTelephone"><i class="fa fa-phone-alt"></i> +2347036181053, 07030569389</p>
+      <div class="heroTopSocials">
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="icon">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="icon">
+          <i class="fa fa-envelope-open"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="main">
+        <div class="upper" id="main1"></div>
+        <h3>About us</h3>
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6">
+            <img src="img/zion-logo.png " class="animated wow fadeInLeft" id="item1" alt="logo">            
+          </div>
+                <div class="col-12 col-md-6 animated wow fadeInRight" data-wow-delay="0.7s">
+          <div class="item2">
+            <p><h2>ZIONWOL SOLUTIONS LIMITED</h2> </p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="text wow animated fadeInLeft" data-wow-delay="0.7s">
+        <p>Zionwol Solutions LTD. (RC 1650253) is a technological company established to provide world class engineering services for Nigeria populace.  We offer a range of services covering power and energy, information technology, security and communication. We are one of the leading renewable energy companies in Nigeria, providing a steady power supply to homes and businesses using clean energy especially from the sun.  We do installation, repair and maintenance of solar and inverter, CCTV, INTERCOM, Satellite TV and electric fence. We also offer services in IT Solutions, Web designing and computer networking.</p>
+        <p>At Zionwol Solutions LTD, we provide turnkey Engineering, Procurement and Construction (EPC) and Operational & Maintenance (O&M) services for call our clients anywhere in Nigeria and sub-Saharan Africa.  We do maintain a clear ground on quality service delivery that will satisfy our customers.</p>
+        <p>In our quest to advocate for the nation’s go green, skill acquisition and youth empowerment, our company provide solar power solutions and training programs on Solar & Inverter, CCTV, INTERCOM, Satellite TV, Electric Fencing, Web Designing, and many more.</p>
+      </div>
+      <div class="row middle">
+
+        <div class="col-md-6 animated wow fadeInLeft" data-wow-delay="0.8s">
+          <h3>Our Objectives</h3>
+          <p>1. To make Zionwol Solutions LTD the number one destination for the procurement and installation of solar & inverter system, CCTV, INTERCOM, Satellite TV, Electric fence components.</p>
+          <p>2. To provide and maintain excellent customer service.</p>
+          <p>3. To deliver and install only high quality products.</p>
+        </div>
+        <div class="col-md-6 animated wow fadeInRight" data-wow-delay="0.8s">
+          <h3>Our Mission</h3>
+          <p>1. To make electricity stable, clean and affordable</p>
+          <p>2. To meet and exceed customers’ expectations of price, service and quality.</p>
+        </div>
+      </div>
+</body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  </html>

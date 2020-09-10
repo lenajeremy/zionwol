@@ -631,13 +631,15 @@ section#contactUs {
         height: 50px;
         font-size: 14px;
         transition: all 0.5s ease-in-out;
+        border: 2px solid transparent;
       }
       textarea.form-control{
         height: 130px;
       }
       input.form-control:focus, textarea.form-control:focus{
         box-shadow: none;
-        border-left: 2px solid darkgreen;
+        border: 2px solid darkgreen;
+        box-shadow: inset 3px 0px 7px gray!important;
       }
       input.form-control:hover, textarea.form-control:hover{
         background: #f1f1f1;
@@ -690,4 +692,53 @@ footer {
      }
    }
  }
+}
+.share{
+  .btn{
+    border: 1px solid black;
+  }
+}
+
+// ABOUT
+.main{
+  #main1{
+
+    background: url('../img/zion2.gif');
+    //background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    background-position: center bottom;
+ }
+ h3{
+   text-align: center;
+   padding: 20px;
+ }
+ #item1{
+   width: 300px;
+   margin-left: 200px;
+ }
+ .item2{
+   margin-left: -200px;
+ }
+}
+.text{
+  margin-top: 50px;
+   justify-content: center;
+  p{
+    padding-left: 50px;
+    font-weight: 600;
+    font-style: normal;
+    padding-right: 50px;
+
+  }
+}
+.middle{
+  padding-top: 20px;
+  p,h3{
+    padding-left: 50px;
+    font-weight: 600;
+    font-style: normal;
+  }
 }

@@ -665,6 +665,7 @@ section#contactUs .form .main-form input.form-control, section#contactUs .form .
   font-size: 14px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  border: 2px solid transparent;
 }
 
 section#contactUs .form .main-form textarea.form-control {
@@ -674,7 +675,9 @@ section#contactUs .form .main-form textarea.form-control {
 section#contactUs .form .main-form input.form-control:focus, section#contactUs .form .main-form textarea.form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-left: 2px solid darkgreen;
+  border: 2px solid darkgreen;
+  -webkit-box-shadow: inset 3px 0px 7px gray !important;
+          box-shadow: inset 3px 0px 7px gray !important;
 }
 
 section#contactUs .form .main-form input.form-control:hover, section#contactUs .form .main-form textarea.form-control:hover {
@@ -737,5 +740,56 @@ footer .least p a {
 
 footer .least p a:hover {
   text-decoration: underline;
+}
+
+.share .btn {
+  border: 1px solid black;
+}
+
+.main #main1 {
+  background: url("../img/zion2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  background-position: center bottom;
+}
+
+.main h3 {
+  text-align: center;
+  padding: 20px;
+}
+
+.main #item1 {
+  width: 300px;
+  margin-left: 200px;
+}
+
+.main .item2 {
+  margin-left: -200px;
+}
+
+.text {
+  margin-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text p {
+  padding-left: 50px;
+  font-weight: 600;
+  font-style: normal;
+  padding-right: 50px;
+}
+
+.middle {
+  padding-top: 20px;
+}
+
+.middle p, .middle h3 {
+  padding-left: 50px;
+  font-weight: 600;
+  font-style: normal;
 }
 /*# sourceMappingURL=styles.css.map */
