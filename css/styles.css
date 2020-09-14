@@ -102,7 +102,6 @@ header .logo {
 }
 
 header .logo img {
-  top: 50%;
   display: block;
   width: 140px;
   z-index: 2;
@@ -218,20 +217,45 @@ header .main-nav ul li.active::after {
 
 @media screen and (max-width: 768px) {
   header .main-nav {
-    width: 50%;
+    width: 100%;
     position: absolute;
     -webkit-animation: none;
             animation: none;
     right: 0;
-    top: -32px;
+    height: 100vh;
+    z-index: 50001;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header .main-nav.active {
+    visibility: visible;
+    opacity: 1;
   }
   header .main-nav ul {
     position: absolute;
-    top: 0px;
+    top: 0;
+    margin: 0;
+    background: rgba(4, 151, 95, 0.966);
     left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .main-nav ul li {
     float: none;
+    font-size: 30px;
+    margin-top: 50px;
+    color: lightgray !important;
   }
   header .main-nav ul li::after {
     display: none;
@@ -240,6 +264,7 @@ header .main-nav ul li.active::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    z-index: 50001;
   }
   header .logo img {
     width: 120px;
@@ -879,8 +904,6 @@ footer .least p a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 50px;
-    margin-right: 200px;
     padding-left: -100px;
   }
   footer {
@@ -1019,7 +1042,7 @@ footer .least p a:hover {
 }
 
 .row {
-  --bs-gutter-x: 0!important;
+  --bs-gutter-x: 0 !important;
 }
 
 .image-testimonial-small {
@@ -1066,4 +1089,18 @@ section#testimonials {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=styles.css.map */
+=======
+
+@media screen and (max-width: 768px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    z-index: 2;
+  }
+}
+
+#replacementHeader .toggler.in .bars {
+  background: white;
+}
+>>>>>>> 38b2decaac6711dcc6922efcd08f3f2721a66ab1
