@@ -862,6 +862,9 @@ footer .least p a:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .social1 {
+    display: none;
+  }
   #replacementHeader {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1057,3 +1060,4 @@ section#testimonials {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+/*# sourceMappingURL=styles.css.map */
