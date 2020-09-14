@@ -28,9 +28,9 @@ if (nextBtn) {
     $(".owl-carousel").owlCarousel({
       items: 4,
       loop: true,
-      margin: 170,
+      margin: 120,
       center: true,
-      smartSpeed: 900,
+      smartSpeed:900,
       nav: true,
       navText: [
         "<i class='fa carousel-left-arrow fa-chevron-left'></i>",
@@ -45,14 +45,14 @@ if (nextBtn) {
         600: {
           items: 1,
           nav: true,
-          margin: 120,
+          margin: 170,
         },
         1000: {
-          items: 3,
+          items: 1,
           nav: true,
           loop: true,
           autoplay: true,
-          autoplayTimeout: 1500,
+          autoplayTimeout: 7000,
           navText: [
             "<i class='fa carousel-left-arrow fa-chevron-left'></i>",
             "<i class='fa carousel-right-arrow fa-chevron-right'></i>",
@@ -60,22 +60,18 @@ if (nextBtn) {
         },
       },
     });
+
+    $.fn.goTo = function () {
+      $("html, body").animate(
+        {
+          scrollTop: $(this).offset().top + "px",
+        },
+        "slow"
+      );
+      return this; // for chaining...
+    };
   };
 
-  //   baguetteBox.run('.tz-gallery', {
-  //     animation: 'fadeIn',
-  //     noScrollbars: true
-  //     });
-
-  $.fn.goTo = function () {
-    $("html, body").animate(
-      {
-        scrollTop: $(this).offset().top + "px",
-      },
-      "slow"
-    );
-    return this; // for chaining...
-  };
 
   $(function () {
     owlCarousel();
@@ -166,3 +162,5 @@ document.querySelectorAll("input").forEach((input) =>
     }
   })
 );
+
+

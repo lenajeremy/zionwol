@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <script src="js/all.js"></script>
 
   <!-- Animation -->
@@ -31,6 +35,9 @@
   </style>
 </head>
 <body>
+  <div class='firstAnimation'>
+    <img src='img/loader.gif'>
+  </div>
   <div class="backToTop" onclick="$('body').goTo();return false;">
     <i class="fa fa-chevron-up"></i>
   </div>
@@ -61,7 +68,7 @@
       <div class="logo animated wow fadeInLeft" data-wow-delay=0.2s onanimationstart="this.style.zIndex=1">
         <img src="img/zion-logo.png" alt="">
       </div>
-      <nav class='main-nav wow animated fadeInRight' data-wow-delay="0.5s">
+      <nav class='main-nav'>
         <ul class="nav-content">
           <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -95,7 +102,7 @@
   </header>
 
   <div class="heroImage">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -138,7 +145,7 @@
               <p class='wow animated fadeInUp' data-wow-delay="1.8"><strong>Zion Solutions LTD.</strong> is a technological company established to provide world class engineering services for Nigeria populace. We offer a range of services covering power and energy, information technology, security and communication. We are one of the leading renewable energy companies in Nigeria, providing a steady power supply to homes and businesses using energy especially the sun. We do installation, repair and maintenance of solar and inverter, CCTV, INTERCOM, satellite TV and electric fence. We also offer services in IT solutions, web designing and computer networking</p>
             </div>
           </div>
-          <div class="col-12 col-md-4 animated wow fadeInLeft" data-wow-delay="0.7s">
+          <div class="col-12 col-md-4 animated wow fadeInRight" data-wow-delay="0.7s">
               <img src="img/zion-logo.png" alt="logo">
           </div>
         </div>
@@ -155,14 +162,17 @@
               <div class="row">
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.2s">
                   <a href="img/800px-Solar_panels_on_a_roof.jpg" class="lightbox lightbox-stuff" id = one>
+                    <img src="img/800px-Solar_panels_on_a_roof.jpg" alt="" class="d-none">
                     <p class="lightbox-text">SOLAR PANEL INSTALLATION</p>
                   </a>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.4s">
                   <a href="img/zion workers.jpg" class="lightbox lightbox-stuff" id = two>
+                    <img src="img/zion workers.jpg" alt="" class="d-none">
                     <p class="lightbox-text">ELECTRICAL ENGINEERING</p></a>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.6s">
+                  <img src="img/electric fence.jpeg" alt="" class="d-none">
                   <a href="img/electric fence.jpeg" class="lightbox lightbox-stuff" id = three>
                     <p class="lightbox-text">ELECRIC FENCE</p></a>
                 </div>
@@ -170,14 +180,17 @@
               <div class="row mt-3">
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="0.8s">
                   <a href="img/cctv to use.png" class="lightbox lightbox-stuff" id = four>
+                    <img src="img/cctv to use.png" alt="" class="d-none">
                     <p class="lightbox-text">CCTV CAMERAS</p></a>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="1.0s">
                   <a href="img/zion-intercom.png" class="lightbox lightbox-stuff" id = five>
+                    <img src="img/zion-intercom.png" alt="" class="d-none">
                     <p class="lightbox-text">INTERCOM</p></a>
                 </div>
                 <div class="col-md-4 mt-3 mt-md-0 wow animated fadeInUp" data-wow-delay="1.2s">
                   <a href="img/zion-satellite.png" class="lightbox lightbox-stuff" id = six>
+                    <img src="img/zion-satellite.png" alt="" class="d-none">
                   <p class="lightbox-text">SATELLITE</p></a>
                 </div>
               </div>
@@ -186,6 +199,40 @@
         </div>
       </div>
     </section>
+
+    <!-- testimonials -->
+
+    <section id="testimonials" class='p-3'>
+      <h1 class='my-md-5 my-4 wow animated fadeInUp heading' data-wow-delay="0s">Our Customers Say...
+        <div class="underline"><div class="triangle"></div></div>
+      </h1>
+       <div class="container mt-3">
+        <div class="carousel-default owl-carousel carousel-wide-arrows">
+          <div class="item">
+            <div class="text-center">
+              <div class="image-testimonial-small review-1"></div>
+              <p class="margin-bottom customer-message">Excellent Service!! I've never been this satisfied at the quality of service rendered.</p>
+              <p class="text-size-16 customer">Scott TravelStar</p>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="text-center">
+              <div class="image-testimonial-small review-2"></div>
+              <p class="margin-bottom customer-message">Perfect Hosting package. Secure and affordable. You don't have to worry about being online. Zionwol has got you covered</p>
+              <p class="text-size-16 customer">Jeremiah Stonefield</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="text-center">
+              <div class="image-testimonial-small review-3"></div>
+              <p class=" margin-bottom customer-message">Excellent customer care service. I can say that Zionwol really values the satisfaction of her customers!!</p>
+              <p class=" text-size-16 customer">Lena Jeremiah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Form -->
     <section id="contactUs" class='p-5'>
       <h1 class="heading">Contact Us</h1>

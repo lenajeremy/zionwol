@@ -10,48 +10,6 @@ html {
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
-  font-weight: bolder;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts//OpenSans-BoldItalic.ttf") format("truetype");
-  font-weight: bolder;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts//OpenSans-Light.ttf") format("truetype");
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts//OpenSans-LightItalic.ttf") format("truetype");
-  font-weight: lighter;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts//OpenSans-Semibold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts//OpenSans-SemiboldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
 .paragraphText {
   line-height: 1.5rem;
   color: #353535;
@@ -137,7 +95,7 @@ header {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   padding: 30px;
   width: 100%;
@@ -299,6 +257,7 @@ header .main-nav ul li.active::after {
   position: relative;
   width: 100%;
   height: 90vh;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,6 +321,7 @@ header .main-nav ul li.active::after {
 .carousel-control-next,
 .carousel-control-prev {
   height: 60%;
+  z-index: 5;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -645,16 +605,17 @@ a.lightbox-stuff:hover .lightbox-text {
   font-size: 22px;
 }
 
-section#contactUs {
-  height: 90vh;
-  width: 100%;
-  background: #e1f3e1;
-}
-
-section#contactUs .heading {
+.heading {
   font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
+}
+
+section#contactUs {
+  height: 90vh;
+  width: 100%;
+  background: url("../img/contact-bg.jpg") fixed;
+  background-position: bottom left;
 }
 
 section#contactUs .form {
@@ -665,7 +626,8 @@ section#contactUs .form .main-form {
   width: 100%;
 }
 
-section#contactUs .form .main-form input.form-control, section#contactUs .form .main-form textarea.form-control {
+section#contactUs .form .main-form input.form-control,
+section#contactUs .form .main-form textarea.form-control {
   border-radius: 0;
   height: 50px;
   font-size: 14px;
@@ -678,13 +640,15 @@ section#contactUs .form .main-form textarea.form-control {
   height: 130px;
 }
 
-section#contactUs .form .main-form input.form-control:focus, section#contactUs .form .main-form textarea.form-control:focus {
+section#contactUs .form .main-form input.form-control:focus,
+section#contactUs .form .main-form textarea.form-control:focus {
   border: 2px solid darkgreen;
   -webkit-box-shadow: inset 3px 0px 7px gray !important;
           box-shadow: inset 3px 0px 7px gray !important;
 }
 
-section#contactUs .form .main-form input.form-control:hover, section#contactUs .form .main-form textarea.form-control:hover {
+section#contactUs .form .main-form input.form-control:hover,
+section#contactUs .form .main-form textarea.form-control:hover {
   background: #f1f1f1;
 }
 
@@ -714,20 +678,19 @@ section#contactUs .form .main-form button:hover {
           flex-direction: column;
 }
 
-footer, #ourServices {
+footer {
   position: relative;
-  background: url(../img/contact-bg.jpg) fixed;
-  background-position: bottom left;
+  background: #e1f3e1;
 }
 
-footer iframe, #ourServices iframe {
+footer iframe {
   display: block;
   height: 400px;
   width: 100%;
   border: 2px solid white;
 }
 
-footer .least, #ourServices .least {
+footer .least {
   width: 100%;
   text-align: center;
   margin-top: 20px;
@@ -735,18 +698,18 @@ footer .least, #ourServices .least {
   padding: 10px;
 }
 
-footer .least p, #ourServices .least p {
+footer .least p {
   margin: 0;
   font-weight: lighter;
   color: white;
 }
 
-footer .least p a, #ourServices .least p a {
+footer .least p a {
   color: white;
   text-decoration: none;
 }
 
-footer .least p a:hover, #ourServices .least p a:hover {
+footer .least p a:hover {
   text-decoration: underline;
 }
 
@@ -935,4 +898,103 @@ footer .least p a:hover, #ourServices .least p a:hover {
 .middle p {
   font-weight: 500;
 }
-/*# sourceMappingURL=styles.css.map */
+
+@-webkit-keyframes loaderAnimation {
+  70% {
+    height: 100vh;
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    height: 0vh;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes loaderAnimation {
+  70% {
+    height: 100vh;
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    height: 0vh;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.firstAnimation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1000;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: loaderAnimation 2s linear;
+          animation: loaderAnimation 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.firstAnimation img {
+  display: block;
+}
+
+.row {
+  --bs-gutter-x: 0!important;
+}
+
+.image-testimonial-small {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid gray;
+  margin-bottom: 20px;
+}
+
+.review-1 {
+  background: url("../img/zion-logo.png");
+  background-size: cover;
+}
+
+.review-2 {
+  background: url("../img/zion2.gif");
+  background-size: cover;
+}
+
+.review-3 {
+  background: url("../img/left satellite.png");
+  background-size: cover;
+}
+
+section#testimonials {
+  background: #e1f3e1;
+  position: relative;
+}
+
+.customer {
+  color: darkgreen;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
