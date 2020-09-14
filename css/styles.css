@@ -712,7 +712,7 @@ footer .least p a:hover {
   display: flex;
   width: 70px;
   height: 70px;
-  background: #e1f3e1;
+  background: #e8f5e8;
   margin: 10px;
   border-radius: 30%;
   -webkit-box-shadow: 0 5px 15px -5px #00000070;
@@ -723,7 +723,7 @@ footer .least p a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #3498db;
+  color: green;
   overflow: hidden;
   position: relative;
   margin-bottom: 15px;
@@ -1060,4 +1060,3 @@ section#testimonials {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/*# sourceMappingURL=styles.css.map */
