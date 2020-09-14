@@ -887,6 +887,72 @@ footer .least p a:hover, #ourServices .least p a:hover {
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    position: relative;
+  }
+  .end-text {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #replacementHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-bottom: 5px;
+  }
+  header .main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    margin-right: 200px;
+    padding-left: -100px;
+  }
+  footer {
+    margin-top: 200px;
+  }
+  .item2 {
+    padding-left: 100px;
+    font-size: 20px;
+  }
+  .middle > p {
+    font-size: 20px;
+  }
+  .second {
+    background-color: #e1f3e1;
+    width: 100%;
+  }
+  .sat {
+    text-align: center;
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 100px;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  .sat {
+    padding-left: -10px;
+  }
+}
+
 .main #main1 {
   background-image: url("../img/zion2.gif");
   width: 100%;

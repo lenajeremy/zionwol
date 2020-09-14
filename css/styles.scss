@@ -789,6 +789,78 @@ footer, #ourServices{
   font-size: 20px;
   font-weight:bold;
 }
+@media screen and (max-width: 768px){
+  footer{
+    position: relative;
+  }
+  .end-text{
+    transform: none;
+  }
+  .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+//   .social1{
+//     //display: flex;
+//     justify-content: space-evenly;
+//     // bottom: 40px;
+//     width: 100%;
+//     justify-content: center;
+//     margin: 40px;
+//     width: 100%;
+//   }
+//   #big{
+//     padding-right: 200px;
+//     position: none;
+//   }
+//   #social{
+//     padding-right: 20px;
+
+//   }
+// #small{
+//   padding-right: 10px;
+// }
+
+#replacementHeader{
+  display:flex;
+  justify-content: space-evenly;
+  padding-bottom:5px;
+}
+header .main-nav ul{
+  display: flex;
+  margin-top: 50px;
+  margin-right: 200px;
+  padding-left:-100px;
+}
+footer{
+  margin-top:200px;
+}
+.item2{
+  padding-left:100px ;
+  font-size: 20px;
+}
+.middle > p{
+  font-size: 20px;
+}
+.second{
+  background-color: #e1f3e1;
+  width: 100%;
+}
+.sat{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  padding-left: 100px;
+}
+}
+@media screen and (max-width: 466px){
+  .sat{
+
+    padding-left: -10px;
+  }
+}
 //about
 .main{
 
