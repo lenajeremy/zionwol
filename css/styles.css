@@ -672,6 +672,7 @@ section#contactUs .form .main-form button:hover {
 }
 
 footer {
+  padding-top: -100px;
   position: relative;
   background: #e1f3e1;
 }
@@ -887,10 +888,6 @@ footer .least p a:hover {
   }
   .item2 {
     padding-left: 100px;
-    font-size: 20px;
-  }
-  .middle > p {
-    font-size: 20px;
   }
   .second {
     background-color: #e1f3e1;
@@ -932,6 +929,15 @@ footer .least p a:hover {
   font-weight: 600;
   color: #ffffff;
   font-size: 50px;
+}
+
+@media screen and (max-width: 470px) {
+  .main #main1 {
+    width: auto;
+  }
+  .sat {
+    margin-left: -90px;
+  }
 }
 
 .main #item1 {
@@ -1060,3 +1066,4 @@ section#testimonials {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+/*# sourceMappingURL=styles.css.map */
