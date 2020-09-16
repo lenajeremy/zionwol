@@ -2,7 +2,9 @@ $primaryColor: rgb(2, 0, 116);
 $buttonColor: rgb(0, 175, 23);
 $paragraphTextColor: #353535;
 $overlayColor: rgba(0, 88, 88, 0.425);
-$headerFont: 'Times New Roman', Times, serif;
+$headerFont: 'Times New Roman',
+Times,
+serif;
 $mainHeading: 3rem;
 $secondaryColor: rgb(0, 255, 64);
 
@@ -215,12 +217,15 @@ header {
       li.nav-item:nth-child(1) {
         animation: fadeInDownMain 0.5s 0s ease-in-out forwards;
       }
+
       li.nav-item:nth-child(2) {
         animation: fadeInDownMain 0.5s 0.1s ease-in-out forwards;
       }
+
       li.nav-item:nth-child(3) {
         animation: fadeInDownMain 0.5s 0.2s ease-in-out forwards;
       }
+
       li.nav-item:nth-child(4) {
         animation: fadeInDownMain 0.5s 0.3s ease-in-out forwards;
       }
@@ -797,33 +802,6 @@ footer {
   }
 }
 
-.end-text {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  position: absolute;
-  right: 0;
-  transform: rotate(-90deg) translateY(50%);
-  bottom: 50%;
-  margin: 0;
-}
-
-.end-text#big {
-  font-size: 30px;
-  font-weight: bold;
-  right: 3rem;
-}
-
-.end-text#small {
-  font-size: 13px;
-  right: 2.1rem;
-}
-
-.end-text#social {
-  right: -3rem;
-  font-weight: bold;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 @media screen and (max-width: 768px) {
   footer {
     position: relative;
@@ -866,19 +844,6 @@ footer {
   .second {
     background-color: #e1f3e1;
     width: 100%;
-  }
-
-  .sat {
-    text-align: center;
-    display: block;
-    justify-content: center;
-    padding-left: 100px;
-  }
-}
-
-@media screen and (max-width: 466px) {
-  .sat {
-    padding-left: -10px;
   }
 }
 
@@ -964,7 +929,8 @@ footer {
 
 .row {
   --bs-gutter-x: 0 !important;
-  div{
+
+  div {
     --bs-gutter-x: 1.5rem;
   }
 }
@@ -1017,19 +983,32 @@ section#testimonials {
   .carousel-control-prev {
     z-index: 2;
   }
-  .headerTop p{
+
+  .headerTop p {
     font-size: 12px;
   }
-  .wrapper{
+
+  .wrapper {
     width: 90%;
   }
-  form p{
+
+  form p {
     font-weight: normal;
   }
-  section#contactUs{
-    background-position: center bottom;   
+
+  section#contactUs {
+    background-position: center bottom;
   }
-  .second{
+
+  .second {
     background: none;
+  }
+  form button{
+    margin: auto!important;
+  }
+  .btn{
+    width: 55px;
+    height: 55px;
+    margin: 5px;
   }
 }

@@ -874,34 +874,6 @@ footer .least p a:hover {
   width: 100% !important;
 }
 
-.end-text {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  position: absolute;
-  right: 0;
-  -webkit-transform: rotate(-90deg) translateY(50%);
-          transform: rotate(-90deg) translateY(50%);
-  bottom: 50%;
-  margin: 0;
-}
-
-.end-text#big {
-  font-size: 30px;
-  font-weight: bold;
-  right: 3rem;
-}
-
-.end-text#small {
-  font-size: 13px;
-  right: 2.1rem;
-}
-
-.end-text#social {
-  right: -3rem;
-  font-weight: bold;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 @media screen and (max-width: 768px) {
   footer {
     position: relative;
@@ -949,20 +921,6 @@ footer .least p a:hover {
   .second {
     background-color: #e1f3e1;
     width: 100%;
-  }
-  .sat {
-    text-align: center;
-    display: block;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 100px;
-  }
-}
-
-@media screen and (max-width: 466px) {
-  .sat {
-    padding-left: -10px;
   }
 }
 
@@ -1138,5 +1096,13 @@ section#testimonials {
   }
   .second {
     background: none;
+  }
+  form button {
+    margin: auto !important;
+  }
+  .btn {
+    width: 55px;
+    height: 55px;
+    margin: 5px;
   }
 }

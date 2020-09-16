@@ -165,5 +165,5 @@ document.querySelectorAll("input").forEach((input) =>
 
 document.querySelectorAll('.toggler').forEach(toggler => toggler.addEventListener('click', function doStuff(e){
   document.querySelectorAll('.main-nav').forEach(mainNav => mainNav.classList.toggle('active'))
-  document.querySelectorAll('#replacementHeader').classList.toggle('in')
+  document.querySelector('#replacementHeader').classList.toggle('in')
 }))
