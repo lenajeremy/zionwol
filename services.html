@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scalee=1.0">
+  <title>ZionWol Solutions</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <script src="js/all.js"></script>
+
+  <!-- Animation -->
+  <style>
+    @keyframes replacementHeader {
+      0%{
+        display: none;
+      }
+      1%{
+        transform: translateY(-100%);
+      }
+      100%{
+        transform: translateY(0);
+        display: flex;
+      }
+    }
+    #replacementHeader{
+      animation: replacementHeader 0.7s ease-in-out;
+    }
+    .header{
+      height: 130px;
+      width:100%;
+      background: rgb(0, 167, 167);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header h1{
+      font-weight: bold;
+      font-size: 3.5rem;
+    }
+    .serviceRow{
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .col-md-6 h4{
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .col-md-6 p{
+      text-align: center;
+      font-size: 17px;
+      color: rgb(63, 63, 63);
+      margin: 15px 0 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="backToTop" onclick="$('body').goTo();return false;">
+    <i class="fa fa-chevron-up"></i>
+  </div>
+  <!-- Replacement Header on Scroll -->
+  <header id="replacementHeader">
+    <div class="logo" onanimationstart="this.style.zIndex=1">
+      <img src="img/zion-logo(edited).png" alt="">
+    </div>
+    <nav class='main-nav'>
+      <ul class="nav-content">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+        <div class="toggler">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+  </header>
+
+  <!-- Original Header that gets loaded to the DOM first -->
+  <header id='header' class=''>
+    <div class="container-fluid d-flex mt-3 mt-md-0">
+      <div class="logo animated wow fadeInLeft" data-wow-delay=0.2s onanimationstart="this.style.zIndex=1">
+        <img src="img/zion-logo.png" alt="">
+      </div>
+      <nav class='main-nav'>
+        <ul class="nav-content">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+          <div class="toggler">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </div>
+    <div class="headerTop animated wow fadeInDown" data-wow-delay="0.08s">
+      <p id='heroTopLocation'><i class="fa fa-map-marker-alt"></i> Suite 29, Lord Reign Plaza, opp.Anchor University, Ayobo, Lagos State.</p>
+      <p id="heroTopEmail"><i class="fa fa-envelope"></i> @ZIONWORL SOLUTION LIMITED.com</p>
+      <p id="heroTopTelephone"><i class="fa fa-phone-alt"></i> +2347036181053, 07030569389</p>
+      <div class="heroTopSocials">
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="icon">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="icon">
+          <i class="fa fa-envelope-open"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="main" style="padding-top: 150px;">
+    <div class="header">
+      <h1>OUR SERVICES</h1>
+    </div>
+    <div class="mainServices container py-5">
+      <div class="row serviceRow">
+        <div class="col-md-6 order-0 wow animated fadeInLeft" data-wow-delay="0.2s">
+          <img src="img/cctv to use.png" alt="" class='img-fluid'>
+        </div>
+        <div class="col-md-6 order-1 wow animated fadeInRight" data-wow-delay="0.2s">
+          <h4>CCTV INSTALLATION AND SALE</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat praesentium voluptatibus consequatur aspernatur dolor aut ducimus magnam, neque, culpa laboriosam voluptate nam harum omnis, illo sunt officiis id esse ab. Error rerum repudiandae quam ad. Sapiente id facilis corrupti? Vitae blanditiis accusamus nisi aut porro dignissimos asperiores similique nulla temporibus!</p>
+        </div>
+      </div>
+      <div class="row serviceRow">
+        <div class="col-md-6 order-0 order-md-1 wow animated fadeInLeft" data-wow-delay="0.4s">
+          <img src="img/electric fence.jpeg" alt="" class='img-fluid'>
+        </div>
+        <div class="col-md-6 order-1 order-md-0 wow aniated fadeInRight" data-wow-delay="0.4s">
+          <h4>ELECTRIC FENCE INSTALLATION</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat praesentium voluptatibus consequatur aspernatur dolor aut ducimus magnam, neque, culpa laboriosam voluptate nam harum omnis, illo sunt officiis id esse ab. Error rerum repudiandae quam ad. Sapiente id facilis corrupti? Vitae blanditiis accusamus nisi aut porro dignissimos asperiores similique nulla temporibus!</p>
+        </div>
+      </div>
+      <div class="row serviceRow">
+        <div class="col-md-6 order-0 wow animated fadeInLeft" data-wow-delay="0.6s">
+          <img src="img/800px-Solar_panels_on_a_roof.jpg" alt="" class='img-fluid'>
+        </div>
+        <div class="col-md-6 order-1 wow animated fadeInRight" data-wow-delay="0.6s">
+          <h4>SOLAR PANEL INSTALLATION AND SALE</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat praesentium voluptatibus consequatur aspernatur dolor aut ducimus magnam, neque, culpa laboriosam voluptate nam harum omnis, illo sunt officiis id esse ab. Error rerum repudiandae quam ad. Sapiente id facilis corrupti? Vitae blanditiis accusamus nisi aut porro dignissimos asperiores similique nulla temporibus!</p>
+        </div>
+      </div>
+      <div class="row serviceRow">
+        <div class="col-md-6 order-0 order-md-1 wow animated fadeInLeft" data-wow-delay="0.8s">
+          <img src="img/cctv to use.png" alt="" class='img-fluid'>
+        </div>
+        <div class="col-md-6 order-1 order-md-0 wow animted fadeInRight" data-wow-delay="0.8s">
+          <h4>TRAINING</h4>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat praesentium voluptatibus consequatur aspernatur dolor aut ducimus magnam, neque, culpa laboriosam voluptate nam harum omnis, illo sunt officiis id esse ab. Error rerum repudiandae quam ad. Sapiente id facilis corrupti? Vitae blanditiis accusamus nisi aut porro dignissimos asperiores similique nulla temporibus!</p>
+        </div>
+      </div>
+    </div>
+    <section id="contactUs" class='p-5'>
+      <div class="row">
+        <div class="col-md-7">
+          <form action="mailto:jeremiahlena13@gmail.com" method="POST" class="form">
+            <p class="lead font-weight-bold">Leave A Message</p>
+            <div class="main-form">
+              <div class="input-group">
+                <input type="text" name="username" id="username" class="mb-2 form-control mr-2" placeholder="Your name">
+                <input type="email" name="email" id="email" class="mb-2 form-control" placeholder="Email">
+              </div>
+              <input type="text" name="subject" id="subject" class='mb-2 form-control' placeholder='Subject'>
+              <textarea name="message" id="message" class='mb-2 form-control' cols="30" rows="3" placeholder='Tell us something...'></textarea>
+              <button type="submit" class='btn btn-success'>SUBMIT</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-5 d-flex align-items-center justify-content-center second">
+          <h3><strong>Opening Hours</strong></h3><p>Monday - Saturday</p><p>(9:00am – 5:00pm)</p><h3 class='mt-5'><strong>Training Hours</strong></h3><p>(Mon – Wed) 10:00 am – 1:00 pm</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="animated wow fadeIn" data-wow-delay="0.5s">
+    <div class="end row pt-5" >
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.8424634290632!2d3.242289796471597!3d6.6008752129569865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9a8d5e41a731%3A0x893bee9fb0fd2b81!2sAnchor%20University!5e0!3m2!1sen!2sng!4v1599497723843!5m2!1sen!2sng" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div class="col-md-4 second-footer-col">
+        <p class='mb-4 mt-5'><i class="fa fa-envelope-open fa-2x d-block text-success mb-2"></i> info@zionwolsolutions.com</p>
+        <p class='mb-4'><i class="fa-map-marker-alt fa fa-2x d-block text-success mb-2"></i> Suite 29, LORD Reigns Plaza,</br> Opposite Anchor University, Ayobo,</br> Lagos State, Nigeria.</p>
+        <p class='mb-4'><i class="fab fa-whatsapp fa-2x class='mb-4'x d-block text-success mb-2"></i> +234 703 618 1053 </p>
+      </div>
+      <div class="col-md-2 d-flex align-items-center justify-content-center">
+        <div class="share">
+          <div class="btn">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="btn">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="btn">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="btn">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+       <!-- <div class="social1">
+      <p id='big' class='end-text'>SHARE</p>
+      <p id="small" class='end-text'>ON YOUR</p>
+      <p id ='social' class='end-text'>SOCIAL PLATFORMS</p>
+      </div> -->
+    <div class="least">
+      <p>Designed By <a href=""><strong>ZIONWOL SOLUTIONS LIMITED,</strong> ZionWol limited</a></p>
+    </div>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+</body>
+</html>
