@@ -830,7 +830,6 @@ footer {
   }
 
   .item2 {
-    padding-left: 100px;
     font-size: 20px;
   }
 
@@ -854,6 +853,11 @@ footer {
     justify-content: center;
     align-items: center;
   }
+  .sat{
+    img{
+      height: 400px;
+    }
+  }
 
   h3 {
     font-weight: 600;
@@ -861,15 +865,15 @@ footer {
     font-size: 50px;
   }
 }
-@media screen and (max-width:470px){
+@media screen and (max-width:395px){
 .main{
   #main1{
-    width: auto;
+    width:auto;
   }
 }
-.sat{
-  margin-left: -90px;
-}
+// .sat{
+//   margin-left: -90px;
+// }
 }
 
 .main {
@@ -877,16 +881,18 @@ footer {
     width: 300px;
     margin-left: 350px;
   }
-
-  .item2 {
-    margin-left: -100px;
-  }
   .first {
     font-weight: 500;
     line-height: 1.5rem;
     margin-top: 50px;
     margin-bottom: 50px;
+    
   }
+}
+@media screen and (min-width:888px){
+  .first {
+  margin-left: -50px; 
+}
 }
 .middle {
   padding-left: 100px;

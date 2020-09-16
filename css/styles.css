@@ -731,7 +731,6 @@ section#contactUs .main-form button:hover {
 }
 
 footer {
-  padding-top: -100px;
   position: relative;
   background: #e1f3e1;
 }
@@ -913,7 +912,10 @@ footer .least p a:hover {
     padding-left: -100px;
   }
   .item2 {
-    padding-left: 100px;
+    font-size: 20px;
+  }
+  .middle > p {
+    font-size: 20px;
   }
   .second {
     background-color: #e1f3e1;
@@ -937,18 +939,19 @@ footer .least p a:hover {
           align-items: center;
 }
 
+.main .sat img {
+  height: 400px;
+}
+
 .main h3 {
   font-weight: 600;
   color: #ffffff;
   font-size: 50px;
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 395px) {
   .main #main1 {
     width: auto;
-  }
-  .sat {
-    margin-left: -90px;
   }
 }
 
@@ -957,15 +960,17 @@ footer .least p a:hover {
   margin-left: 350px;
 }
 
-.main .item2 {
-  margin-left: -100px;
-}
-
 .main .first {
   font-weight: 500;
   line-height: 1.5rem;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 888px) {
+  .first {
+    margin-left: -50px;
+  }
 }
 
 .middle {
@@ -1082,9 +1087,6 @@ section#testimonials {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=styles.css.map */
-=======
 
 @media screen and (max-width: 768px) {
   .carousel-control-next,
@@ -1115,4 +1117,4 @@ section#testimonials {
     margin: 5px;
   }
 }
->>>>>>> 38b2decaac6711dcc6922efcd08f3f2721a66ab1
+/*# sourceMappingURL=styles.css.map */
